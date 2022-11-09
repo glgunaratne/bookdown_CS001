@@ -1,6 +1,6 @@
 --- 
-title: "A Minimal Book Example"
-author: "John Doe"
+title: "Development of a water quality response model for Cockburn Sound"
+author: "Gayan Gunaratne, kabir suaera and Louise Bruce"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
