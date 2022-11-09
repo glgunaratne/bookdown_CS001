@@ -26,7 +26,7 @@ Key attributes of the system that need to be clearly understood and quantified i
 
 This project will:
 
-**Deliver the first base platform of a coupled hydrodynamic - water quality model for Cockburn Sound and surrounding waters – termed the Cycle I model in the head agreement. The model developed under this agreement will be available for use by researchers and industry for scenario assessment, and further research and development.**
+**Deliver the first base platform of a coupled hydrodynamic - water quality model for Cockburn Sound and surrounding waters – termed the Cycle I model in the head agreement. The model developed under this agreement [@WAMSI2022] will be available for use by researchers and industry for scenario assessment, and further research and development.**
 
 
 
