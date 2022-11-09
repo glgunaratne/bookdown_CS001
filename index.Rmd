@@ -1,6 +1,6 @@
 --- 
 title: "Development of a water quality response model for Cockburn Sound"
-author: "Gayan Gunaratne, kabir suaera and Louise Bruce"
+author: "Gayan Gunaratne, Kabir Suara and Louise Bruce"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
@@ -16,6 +16,19 @@ github-repo: rstudio/bookdown-demo
 ---
 
 # About
+
+
+## Project description
+
+The project is part of the Integrated Modelling research theme in the WAMSI-Westport Marine Science Program.
+Fundamental to assessing the impacts of future changes within Cockburn Sound and associated waters, and identifying useful mitigation options is the development of a water quality model able to link hydrodynamics, biogeochemistry and the essential ecosystem processes. Coupled hydrodynamic-biogeochemical models can help focus management effort and provide a vehicle to bring together to the diversity of data that has been collected over many years and is being collected within this science program.
+Key attributes of the system that need to be clearly understood and quantified include oxygen, nutrients, sediment, algae and water clarity. The link between water quality and benthic communities such as seagrass in Cockburn Sound is also well established, and an integrated modelling tool is needed to quantify the links between them for the purposes of impact assessment and designing mitigation portfolios. 
+
+This project will:
+
+**Deliver the first base platform of a coupled hydrodynamic - water quality model for Cockburn Sound and surrounding waters – termed the Cycle I model in the head agreement. The model developed under this agreement will be available for use by researchers and industry for scenario assessment, and further research and development.**
+
+
 
 This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 = c^2$.
 
