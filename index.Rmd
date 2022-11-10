@@ -29,39 +29,40 @@ This project will:
 
 
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 = c^2$.
+## Services Description  
 
-## Usage 
+Setup of Hydrodynamic-Biogeochemical Model for Cockburn Sound and surrounding waters
 
-Each **bookdown** chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter *must* start with a first-level heading: `# A good chapter`, and can contain one (and only one) first-level heading.
+* Updated mesh, refined around Cockburn Sound and designed to nest within the regional ROMS model being used to supply oceanic boundary conditions
 
-Use second-level and higher headings within chapters like: `## A short section` or `### An even shorter section`.
+* Creation of processing scripts for creating ocean boundary condition files from ROMS, SCERM, and WRF model outputs using python, or as agreed with the project steering group
 
-The `index.Rmd` file is required, and is also your first book chapter. It will be the homepage when you render the book.
+* Configuration of material zones in the simulation based on bathymetry and benthic substrate.
 
-## Render book
+* Operation of the TUFLOW-FV hydrodynamic model for representative climatological simulation periods and model assessment and benchmarking against the model performance metrics achieved in the Water Corporation simulations. 
 
-You can render the HTML version of this example book without changing anything:
+* Data collation and processing to create nutrient loading boundary condition files, considering a groundwater and local stormwater inputs
 
-1. Find the **Build** pane in the RStudio IDE, and
+* Development of a base AED simulation for the agreed simulation period with a configuration developed in collaboration with the project steering group
 
-1. Click on **Build Book**, then select your output format, or select "All formats" if you'd like to use multiple formats from the same book source files.
+* Creation of a benthic input csv file for seagrass biomass
 
-Or build the book from the R console:
+* Model assessment of water quality (oxygen, nutrients, turbidity and chl-a) from routine monitoring sites and the DWER monitoring buoys, able to compare:
+  + Time series comparison
+  + Statistical measures of model performance and error metrics  
+  + Vertical profile time-series comparisons
 
-```{r, eval=FALSE}
-bookdown::render_book()
-```
 
-To render this example to PDF as a `bookdown::pdf_book`, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.org/tinytex/>.
+## Deliverables
 
-## Preview book
+* Participation in Project 1.2 meetings and model co-design
 
-As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in "Preview book", or from the R console:
+* Model input files for TUFLOW-FV simulation, including relevant 2dm, fvc, csv and netcdf files.
 
-```{r eval=FALSE}
-bookdown::serve_book()
-```
+* Model input files for the AED coupled simulation, including relevant nml and csv files with model configuration and parameters.
+
+*	Model processing scripts for creating inputs, and reporting model outputs.
+*	Calibration report describing model setup, assumptions and performance
 
 
 ```{r include=FALSE}

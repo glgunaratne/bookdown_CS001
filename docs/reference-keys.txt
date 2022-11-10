@@ -4,8 +4,7 @@ eq:binom
 thm:tri
 about
 project-description
-usage
-render-book
+services-description
 preview-book
 hello-bookdown
 a-section
@@ -24,3 +23,4 @@ sharing-your-book
 publishing
 pages
 metadata-for-sharing
+deliverables
