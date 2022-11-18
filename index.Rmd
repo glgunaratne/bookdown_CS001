@@ -65,6 +65,11 @@ Setup of Hydrodynamic-Biogeochemical Model for Cockburn Sound and surrounding wa
 *	Calibration report describing model setup, assumptions and performance
 
 
+
+The report presents a data sourcing and numerical modelling work of BMT conducted in partnership with the UWA providing guidance in data sourcing, model selection and model parameterisation.
+
+
+
 ```{r include=FALSE}
 # automatically create a bib database for R packages
 knitr::write_bib(c(
