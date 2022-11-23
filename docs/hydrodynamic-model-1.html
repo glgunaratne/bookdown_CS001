@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Model Calibration | Development of a water quality response model for Cockburn Sound</title>
+  <title>Chapter 3 Hydrodynamic Model | Development of a water quality response model for Cockburn Sound</title>
   <meta name="description" content="A technical Report" />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Model Calibration | Development of a water quality response model for Cockburn Sound" />
+  <meta property="og:title" content="Chapter 3 Hydrodynamic Model | Development of a water quality response model for Cockburn Sound" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A technical Report" />
   <meta name="github-repo" content="glgunaratne/bookdown_CS001" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Model Calibration | Development of a water quality response model for Cockburn Sound" />
+  <meta name="twitter:title" content="Chapter 3 Hydrodynamic Model | Development of a water quality response model for Cockburn Sound" />
   
   <meta name="twitter:description" content="A technical Report" />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="hydrodynamic-model-1.html"/>
-<link rel="next" href="sediment-transport-model-1.html"/>
+<link rel="prev" href="integrated-modelling-approach.html"/>
+<link rel="next" href="model-calibration.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -185,26 +185,38 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="model-calibration" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Model Calibration<a href="model-calibration.html#model-calibration" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="data-sourcing" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> Data Sourcing<a href="model-calibration.html#data-sourcing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="adcp-data" class="section level3 hasAnchor" number="4.1.1">
-<h3><span class="header-section-number">4.1.1</span> ADCP data<a href="model-calibration.html#adcp-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="hydrodynamic-model-1" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Hydrodynamic Model<a href="hydrodynamic-model-1.html#hydrodynamic-model-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="tuflofv-3d-hydrodynamic-model" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> TUFLOFV 3D Hydrodynamic Model<a href="hydrodynamic-model-1.html#tuflofv-3d-hydrodynamic-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The hydrodynamic modelling was undertaken using the TUFLOW FV software, which is developed and distributed by BMT. TUFLOW FV is a numerical hydrodynamic model solving the two-dimensional (2D) and three-dimensional (3D) Non-Linear Shallow Water Equations (NLSWE). The model is suitable for simulating a wide range of hydrodynamic systems ranging in scale from open channels and floodplains, through estuaries to coasts and deep offshore. The three-dimensional model was deployed in this study.</p>
+<p>The Finite-Volume (FV) numerical scheme employed by TUFLOW FV solves the NLSWE on unstructured meshes comprised of triangular and quadrilateral elements. The flexible mesh allows for seamless boundary fitting along complex coastlines or channels as well as accurately and efficiently representing complex bathymetries with a minimum number of computational elements. The flexible mesh capability is particularly efficient at resolving a range of scales in a single model without requiring multiple domain nesting. In the present study, a flexible mesh of triangular elements with varying spatial resolution has been employed. Furthermore, the models developed by BMT incorporate a hybrid (fixed z-sigma) coordinate scheme.</p>
+<p>TUFLOW FV provides various options to vertically average 3D output and thereby simplify post-processing tasks. Both
+MATLAB and Python visualisation libraries are available for download on the TUFLOW website to assist with review and presentation of 3D results. Further details regarding the numerical scheme employed by TUFLOW FV are provided in <a href="https://downloads.tuflow.com/_archive/TUFLOW_FV/Manual/TUFLOW_FV_User_Manual_2020.pdf">the TUFLOW FV Science Manual</a>.</p>
+<div id="model-mesh-1" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Model mesh<a href="hydrodynamic-model-1.html#model-mesh-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="currents" class="section level3 hasAnchor" number="4.1.2">
-<h3><span class="header-section-number">4.1.2</span> Currents<a href="model-calibration.html#currents" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-</div>
-<div id="waves" class="section level3 hasAnchor" number="4.1.3">
-<h3><span class="header-section-number">4.1.3</span> Waves<a href="model-calibration.html#waves" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-</div>
-<div id="tempearure-and-salinity" class="section level3 hasAnchor" number="4.1.4">
-<h3><span class="header-section-number">4.1.4</span> Tempearure and Salinity<a href="model-calibration.html#tempearure-and-salinity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="bathymetry-1" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Bathymetry<a href="hydrodynamic-model-1.html#bathymetry-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
 </div>
-<div id="model-validation" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Model validation<a href="model-calibration.html#model-validation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-
+<div id="boundary-conditions-1" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Boundary conditions<a href="hydrodynamic-model-1.html#boundary-conditions-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="metrological-data-1" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Metrological data<a href="hydrodynamic-model-1.html#metrological-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="tidal-data-1" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Tidal data<a href="hydrodynamic-model-1.html#tidal-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="open-ocean-boundary-data-1" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Open ocean boundary data<a href="hydrodynamic-model-1.html#open-ocean-boundary-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="wave-data-1" class="section level3 hasAnchor" number="3.2.4">
+<h3><span class="header-section-number">3.2.4</span> Wave data<a href="hydrodynamic-model-1.html#wave-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="inflow-and-discharge-data-1" class="section level3 hasAnchor" number="3.2.5">
+<h3><span class="header-section-number">3.2.5</span> Inflow and discharge data<a href="hydrodynamic-model-1.html#inflow-and-discharge-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
 </div>
 </div>
             </section>
@@ -212,8 +224,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="hydrodynamic-model-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sediment-transport-model-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="integrated-modelling-approach.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="model-calibration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
