@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Development of a water quality response model for Cockburn Sound</title>
+  <title>Chapter 4 Model Calibration | Development of a water quality response model for Cockburn Sound</title>
   <meta name="description" content="A technical Report" />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Development of a water quality response model for Cockburn Sound" />
+  <meta property="og:title" content="Chapter 4 Model Calibration | Development of a water quality response model for Cockburn Sound" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A technical Report" />
   <meta name="github-repo" content="glgunaratne/bookdown_CS001" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Development of a water quality response model for Cockburn Sound" />
+  <meta name="twitter:title" content="Chapter 4 Model Calibration | Development of a water quality response model for Cockburn Sound" />
   
   <meta name="twitter:description" content="A technical Report" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="hydrodynamic-model-setup.html"/>
+<link rel="prev" href="model-calibration.html"/>
+<link rel="next" href="sediment-transport-model.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -94,7 +94,7 @@ div.csl-indent {
 <li><a href="./">Cockburn Sound BGC Model</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> cover-image: path to the social sharing image like images/cover.jpg</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#project-description"><i class="fa fa-check"></i><b>1.1</b> Project description</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#services-description"><i class="fa fa-check"></i><b>1.2</b> Services Description</a></li>
@@ -129,24 +129,35 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="model-calibration.html"><a href="model-calibration.html#model-validation"><i class="fa fa-check"></i><b>3.2</b> Model validation</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html"><i class="fa fa-check"></i><b>4</b> Sediment Transport Model</a>
+<li class="chapter" data-level="4" data-path="model-calibration-1.html"><a href="model-calibration-1.html"><i class="fa fa-check"></i><b>4</b> Model Calibration</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#data-sourcing-1"><i class="fa fa-check"></i><b>4.1</b> Data sourcing</a>
+<li class="chapter" data-level="4.1" data-path="model-calibration-1.html"><a href="model-calibration-1.html#data-sourcing-1"><i class="fa fa-check"></i><b>4.1</b> Data Sourcing</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#sediment-fractions"><i class="fa fa-check"></i><b>4.1.1</b> Sediment fractions</a></li>
-<li class="chapter" data-level="4.1.2" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#partcle-size-distribution"><i class="fa fa-check"></i><b>4.1.2</b> Partcle size distribution</a></li>
+<li class="chapter" data-level="4.1.1" data-path="model-calibration-1.html"><a href="model-calibration-1.html#adcp-data-1"><i class="fa fa-check"></i><b>4.1.1</b> ADCP data</a></li>
+<li class="chapter" data-level="4.1.2" data-path="model-calibration-1.html"><a href="model-calibration-1.html#currents-1"><i class="fa fa-check"></i><b>4.1.2</b> Currents</a></li>
+<li class="chapter" data-level="4.1.3" data-path="model-calibration-1.html"><a href="model-calibration-1.html#waves-1"><i class="fa fa-check"></i><b>4.1.3</b> Waves</a></li>
+<li class="chapter" data-level="4.1.4" data-path="model-calibration-1.html"><a href="model-calibration-1.html#tempearure-and-salinity-1"><i class="fa fa-check"></i><b>4.1.4</b> Tempearure and Salinity</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#tuflowfv-sediment-transport-module"><i class="fa fa-check"></i><b>4.2</b> TUFLOWFV Sediment transport Module</a></li>
-<li class="chapter" data-level="4.3" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#uncalibrated-model-outputs"><i class="fa fa-check"></i><b>4.3</b> Uncalibrated model outputs</a>
+<li class="chapter" data-level="4.2" data-path="model-calibration-1.html"><a href="model-calibration-1.html#model-validation-1"><i class="fa fa-check"></i><b>4.2</b> Model validation</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html"><i class="fa fa-check"></i><b>5</b> Sediment Transport Model</a>
 <ul>
-<li class="chapter" data-level="4.3.1" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#tss"><i class="fa fa-check"></i><b>4.3.1</b> TSS</a></li>
-<li class="chapter" data-level="4.3.2" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#suspended-solids"><i class="fa fa-check"></i><b>4.3.2</b> Suspended solids</a></li>
+<li class="chapter" data-level="5.1" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#data-sourcing-2"><i class="fa fa-check"></i><b>5.1</b> Data sourcing</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#sediment-fractions"><i class="fa fa-check"></i><b>5.1.1</b> Sediment fractions</a></li>
+<li class="chapter" data-level="5.1.2" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#partcle-size-distribution"><i class="fa fa-check"></i><b>5.1.2</b> Partcle size distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#tuflowfv-sediment-transport-module"><i class="fa fa-check"></i><b>5.2</b> TUFLOWFV Sediment transport Module</a></li>
+<li class="chapter" data-level="5.3" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#uncalibrated-model-outputs"><i class="fa fa-check"></i><b>5.3</b> Uncalibrated model outputs</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#tss"><i class="fa fa-check"></i><b>5.3.1</b> TSS</a></li>
+<li class="chapter" data-level="5.3.2" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#suspended-solids"><i class="fa fa-check"></i><b>5.3.2</b> Suspended solids</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>5</b> Footnotes and citations</a>
+<li class="chapter" data-level="6" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>6</b> Footnotes and citations</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#footnotes"><i class="fa fa-check"></i><b>5.1</b> Footnotes</a></li>
-<li class="chapter" data-level="5.2" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#citations"><i class="fa fa-check"></i><b>5.2</b> Citations</a></li>
+<li class="chapter" data-level="6.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#footnotes"><i class="fa fa-check"></i><b>6.1</b> Footnotes</a></li>
+<li class="chapter" data-level="6.2" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#citations"><i class="fa fa-check"></i><b>6.2</b> Citations</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -169,65 +180,26 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Development of a water quality response model for Cockburn Sound</h1>
-<p class="author"><em>Gayan Gunaratne, Kabir Suara and Louise Bruce</em></p>
-<p class="date"><em>2022-11-23</em></p>
+<div id="model-calibration-1" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Model Calibration<a href="model-calibration-1.html#model-calibration-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="data-sourcing-1" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Data Sourcing<a href="model-calibration-1.html#data-sourcing-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="adcp-data-1" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> ADCP data<a href="model-calibration-1.html#adcp-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="about" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> About<a href="index.html#about" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="project-description" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Project description<a href="index.html#project-description" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The project is part of the Integrated Modelling research theme in the WAMSI-Westport Marine Science Program.
-Fundamental to assessing the impacts of future changes within Cockburn Sound and associated waters (Figure <a href="index.html#fig:CS-studysite">1.1</a>), and identifying useful mitigation options is the development of a water quality model able to link hydrodynamics, biogeochemistry and the essential ecosystem processes. Coupled hydrodynamic-biogeochemical models can help focus management effort and provide a vehicle to bring together to the diversity of data that has been collected over many years and is being collected within this science program.
-Key attributes of the system that need to be clearly understood and quantified include oxygen, nutrients, sediment, algae and water clarity. The link between water quality and benthic communities such as seagrass in Cockburn Sound is also well established, and an integrated modelling tool is needed to quantify the links between them for the purposes of impact assessment and designing mitigation portfolios.</p>
-<div class="figure"><span style="display:block;" id="fig:CS-studysite"></span>
-<img src="images/A11348_000_001_03scopeA4_20221118.jpg" alt="Cockburn Sound and associated waters" width="80%" />
-<p class="caption">
-Figure 1.1: Cockburn Sound and associated waters
-</p>
+<div id="currents-1" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Currents<a href="model-calibration-1.html#currents-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<p>This project will:</p>
-<p><strong>Deliver the first base platform of a coupled hydrodynamic - water quality model for Cockburn Sound and surrounding waters – termed the Cycle I model in the head agreement. The model developed under this agreement <span class="citation">(<a href="#ref-WAMSI2022" role="doc-biblioref">UWA 2022</a>)</span> will be available for use by researchers and industry for scenario assessment, and further research and development.</strong></p>
+<div id="waves-1" class="section level3 hasAnchor" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> Waves<a href="model-calibration-1.html#waves-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="services-description" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> Services Description<a href="index.html#services-description" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Setup of Hydrodynamic-Biogeochemical Model for Cockburn Sound and surrounding waters</p>
-<ul>
-<li><p>Data inventory and gap analysis.</p></li>
-<li><p>Updated mesh, refined around Cockburn Sound and designed to nest within the regional ROMS model being used to supply oceanic boundary conditions.</p></li>
-<li><p>Creation of processing scripts for creating ocean boundary condition files from ROMS, SCERM, and WRF model outputs using python, or as agreed with the project steering group</p></li>
-<li><p>Configuration of material zones in the simulation based on bathymetry and benthic substrate.</p></li>
-<li><p>Operation of the TUFLOW-FV hydrodynamic model for representative climatological simulation periods and model assessment and benchmarking against the model performance metrics achieved in the Water Corporation simulations.</p></li>
-<li><p>Data collation and processing to create nutrient loading boundary condition files, considering a groundwater and local stormwater inputs</p></li>
-<li><p>Development of a base AED simulation for the agreed simulation period with a configuration developed in collaboration with the project steering group</p></li>
-<li><p>Creation of a benthic input csv file for seagrass biomass</p></li>
-<li><p>Model assessment of water quality (oxygen, nutrients, turbidity and chl-a) from routine monitoring sites and the DWER monitoring buoys, able to compare:</p>
-<ul>
-<li>Time series comparison</li>
-<li>Statistical measures of model performance and error metrics<br />
-</li>
-<li>Vertical profile time-series comparisons</li>
-</ul></li>
-</ul>
+<div id="tempearure-and-salinity-1" class="section level3 hasAnchor" number="4.1.4">
+<h3><span class="header-section-number">4.1.4</span> Tempearure and Salinity<a href="model-calibration-1.html#tempearure-and-salinity-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="deliverables" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> Deliverables<a href="index.html#deliverables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li><p>Participation in Project 1.2 meetings and model co-design</p></li>
-<li><p>Model input files for TUFLOW-FV simulation, including relevant 2dm, fvc, csv and netcdf files.</p></li>
-<li><p>Model input files for the AED coupled simulation, including relevant nml and csv files with model configuration and parameters.</p></li>
-<li><p>Model processing scripts for creating inputs, and reporting model outputs.</p></li>
-<li><p>Calibration report describing model setup, assumptions and performance</p></li>
-</ul>
-<p>The report presents a data sourcing and numerical modelling work of BMT conducted in partnership with the UWA providing guidance in data sourcing, model selection and model parameterisation.</p>
+</div>
+<div id="model-validation-1" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Model validation<a href="model-calibration-1.html#model-validation-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
-</div>
-</div>
-<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-WAMSI2022" class="csl-entry">
-UWA. 2022. <em><a href="">Western Australian Marine Science Institution (WAMSI) Collaborative Project Agreement, WAMSI Westport Marine Science Program, Project 1.2 Pathways to Productivity Development of a Water Quality Response Model for Cockburn Sound</a></em>.
 </div>
 </div>
             </section>
@@ -235,8 +207,8 @@ UWA. 2022. <em><a href="">Western Australian Marine Science Institution (WAMSI) 
           </div>
         </div>
       </div>
-
-<a href="hydrodynamic-model-setup.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="model-calibration.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sediment-transport-model.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -267,7 +239,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-Model_calibration.Rmd",
 "text": "Edit"
 },
 "history": {

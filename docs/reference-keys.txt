@@ -32,3 +32,15 @@ suspended-solids
 footnotes-and-citations
 footnotes
 citations
+fig:CS-studysite
+cover-image-path-to-the-social-sharing-image-like-imagescover.jpg
+model-calibration-1
+adcp-data-1
+currents-1
+waves-1
+tempearure-and-salinity-1
+model-validation-1
+data-sourcing-2
+baseline-data
+calibration-data
+boundary-condition-data

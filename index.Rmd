@@ -20,8 +20,15 @@ github-repo:  glgunaratne/bookdown_CS001
 ## Project description
 
 The project is part of the Integrated Modelling research theme in the WAMSI-Westport Marine Science Program.
-Fundamental to assessing the impacts of future changes within Cockburn Sound and associated waters \@ref(CS_studysite), and identifying useful mitigation options is the development of a water quality model able to link hydrodynamics, biogeochemistry and the essential ecosystem processes. Coupled hydrodynamic-biogeochemical models can help focus management effort and provide a vehicle to bring together to the diversity of data that has been collected over many years and is being collected within this science program.
+Fundamental to assessing the impacts of future changes within Cockburn Sound and associated waters (Figure \@ref(fig:CS-studysite)), and identifying useful mitigation options is the development of a water quality model able to link hydrodynamics, biogeochemistry and the essential ecosystem processes. Coupled hydrodynamic-biogeochemical models can help focus management effort and provide a vehicle to bring together to the diversity of data that has been collected over many years and is being collected within this science program.
 Key attributes of the system that need to be clearly understood and quantified include oxygen, nutrients, sediment, algae and water clarity. The link between water quality and benthic communities such as seagrass in Cockburn Sound is also well established, and an integrated modelling tool is needed to quantify the links between them for the purposes of impact assessment and designing mitigation portfolios. 
+
+
+
+```{r CS-studysite, fig.cap='Cockburn Sound and associated waters', out.width='80%',echo=FALSE,}
+# include images created outside R
+knitr::include_graphics("images/A11348_000_001_03scopeA4_20221118.jpg")
+```
 
 This project will:
 
@@ -33,7 +40,9 @@ This project will:
 
 Setup of Hydrodynamic-Biogeochemical Model for Cockburn Sound and surrounding waters
 
-* Updated mesh, refined around Cockburn Sound and designed to nest within the regional ROMS model being used to supply oceanic boundary conditions
+* Data inventory and gap analysis.
+
+* Updated mesh, refined around Cockburn Sound and designed to nest within the regional ROMS model being used to supply oceanic boundary conditions.
 
 * Creation of processing scripts for creating ocean boundary condition files from ROMS, SCERM, and WRF model outputs using python, or as agreed with the project steering group
 
@@ -71,17 +80,9 @@ The report presents a data sourcing and numerical modelling work of BMT conducte
 
 
 
-```{r CS_studysite, fig.cap='Cockburn Sound and associated waters', out.width='80%', fig.asp=.75, fig.align='center', fig.alt='Fundamental to assessing the impacts of future changes within Cockburn Sound and associated waters'}
-# include images created outside R
-knitr::include_graphics("images/A11348_000_001_03scopeA4_20221118.jpg")
-```
 
 
-
-
-
-
-```{r fig.cap}
+```{r include=FALSE}
 # automatically create a bib database for R packages
 knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
