@@ -7,10 +7,10 @@ The hydrodynamic modelling was undertaken using the TUFLOW FV software, which is
 The Finite-Volume (FV) numerical scheme employed by TUFLOW FV solves the NLSWE on unstructured meshes comprised of triangular and quadrilateral elements. The flexible mesh allows for seamless boundary fitting along complex coastlines or channels as well as accurately and efficiently representing complex bathymetries with a minimum number of computational elements. The flexible mesh capability is particularly efficient at resolving a range of scales in a single model without requiring multiple domain nesting. In the present study, a flexible mesh of triangular elements with varying spatial resolution has been employed. Furthermore, the models developed by BMT incorporate a hybrid (fixed z-sigma) coordinate scheme. 
 
 TUFLOW FV provides various options to vertically average 3D output and thereby simplify post-processing tasks. Both
-MATLAB and Python visualisation libraries are available for download on the TUFLOW website to assist with review and presentation of 3D results. Further details regarding the numerical scheme employed by TUFLOW FV are provided in [the TUFLOW FV Science Manual](https://downloads.tuflow.com/_archive/TUFLOW_FV/Manual/TUFLOW_FV_User_Manual_2020.pdf).
+MATLAB and Python visualisation libraries are available for download on the TUFLOW website to assist with review and presentation of 3D results. Further details regarding the numerical scheme employed by TUFLOW FV are provided in the [TUFLOW FV Science Manual](https://downloads.tuflow.com/_archive/TUFLOW_FV/Manual/TUFLOW_FV_User_Manual_2020.pdf).
 
 
-### Model mesh 
+## Model mesh 
 
 
 ### Bathymetry
