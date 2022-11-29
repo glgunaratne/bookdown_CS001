@@ -1,4 +1,4 @@
-# \textcolor{blue}{Hydrodynamic Model}
+# Hydrodynamic Model
 
 ## TUFLOFV 3D Hydrodynamic Model
 
@@ -31,7 +31,7 @@ The local hydrodynamics predicted by TUFLOW FV are influenced by boundary inputs
 
 
 
-### Tide, regional currents, wind and ROMS data
+### ROMS - Tide, regional currents, salinity and temperature
 
 The TUFLOWFV hydrodynamic model was provided with tides, regional current forcing (residual water level, current magnitude and direction), temperature and salinity profiles at the open boundary.
 
@@ -39,15 +39,16 @@ These data were provided by UWA as they sourced these from [ROMS](https://www.my
 
 The ROMS regional model extends from the Kimberley to Bass Strait, and has a few sub domains (ex;north-west, central-west and south-west) with 1-2 km horizontal resolution and 30 sigma layers in the vertical water column [@Middleton2012]. As described in Middleton et al (2012), the model was forced with daily atmospheric (wind and air pressure) and air sea fluxes (heat and freshwater). The model open boundaries were specified with monthly salinity and temperature climatology. The model forcing included tides and monthly mean sea levels. The model initial and forcing data were extracted from various global and Australian oceanographic/meteorological data sources and interpolated in to surface horizontal mesh and open boundary vertical sections. Details of the numerical algorithm of ROMS have been described in [@Shchepetkin2005].
 
+It has a generalized vertical, terrain-following, coordinate system. In addition to that, horizontal velocity components, salinity and temperatures are computed on separate grids (\@ref(fig:stv-grid)). ROMS data were post-processed to make it compatible with the TUFLOFV model mesh.
 
 
-It has a generalized vertical, terrain-following, coordinate system.
+```{r stv-grid, fig.cap='A snapshot of ROMS seprate grids for salinity, temeperatire and velocty components', out.width='80%',echo=FALSE,}
+# include images created outside R
+knitr::include_graphics("images/stv_roms_grid_conversion.png")
+```
 
-### Tidal data
 
-### Open ocean boundary data
-
-### Wave data
+### BARRA - Wave data
 
 ### Inflow and discharge data
 
