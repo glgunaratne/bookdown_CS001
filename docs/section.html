@@ -107,13 +107,10 @@ div.csl-indent {
 <li class="chapter" data-level="3" data-path="section.html"><a href="section.html"><i class="fa fa-check"></i><b>3</b> </a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="section.html"><a href="section.html#tuflofv-3d-hydrodynamic-model"><i class="fa fa-check"></i><b>3.1</b> TUFLOFV 3D Hydrodynamic Model</a></li>
-<li class="chapter" data-level="3.2" data-path="section.html"><a href="section.html#model-domain-mesh-and-bathymetry"><i class="fa fa-check"></i><b>3.2</b> Model domain, mesh and bathymetry</a>
-<ul>
-<li class="chapter" data-level="3.2.1" data-path="section.html"><a href="section.html#bathymetry"><i class="fa fa-check"></i><b>3.2.1</b> Bathymetry</a></li>
-</ul></li>
+<li class="chapter" data-level="3.2" data-path="section.html"><a href="section.html#model-domain-mesh-and-bathymetry"><i class="fa fa-check"></i><b>3.2</b> Model domain, mesh and bathymetry</a></li>
 <li class="chapter" data-level="3.3" data-path="section.html"><a href="section.html#boundary-conditions"><i class="fa fa-check"></i><b>3.3</b> Boundary conditions</a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="section.html"><a href="section.html#metrological-data"><i class="fa fa-check"></i><b>3.3.1</b> Metrological data</a></li>
+<li class="chapter" data-level="3.3.1" data-path="section.html"><a href="section.html#roms-data"><i class="fa fa-check"></i><b>3.3.1</b> ROMS data</a></li>
 <li class="chapter" data-level="3.3.2" data-path="section.html"><a href="section.html#tidal-data"><i class="fa fa-check"></i><b>3.3.2</b> Tidal data</a></li>
 <li class="chapter" data-level="3.3.3" data-path="section.html"><a href="section.html#open-ocean-boundary-data"><i class="fa fa-check"></i><b>3.3.3</b> Open ocean boundary data</a></li>
 <li class="chapter" data-level="3.3.4" data-path="section.html"><a href="section.html#wave-data"><i class="fa fa-check"></i><b>3.3.4</b> Wave data</a></li>
@@ -182,17 +179,27 @@ MATLAB and Python visualisation libraries are available for download on the TUFL
 </div>
 <div id="model-domain-mesh-and-bathymetry" class="section level2 hasAnchor" number="3.2">
 <h2><span class="header-section-number">3.2</span> Model domain, mesh and bathymetry<a href="section.html#model-domain-mesh-and-bathymetry" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The hydrodynamic model domain is shown in Figure 4-1 and extends from Mandurah in the south to Quinns Rock (10 km North of JoondaluP) in the north, covering approximately 400 km of coastline. Offshore the model extends approximately 140 km into the Indian Ocean to depths greater than 4 000 m.
-The model consists of 16 014 horizontal mesh cells with dimensions varying from approximately 9.0 km at the offshore boundary, and decreasing to 50 m in the vicinity of the PSDP (and proposed future) outfall diffuser. Figure 4-2 shows a detail of the model mesh in the study area.
-A 10 m digital elevation model (DEM) was generated for the study area from a range of data sources (Table 4-1). In particular, the DEM was supplemented with finer resolution multibeam data over the Australian Marine Complex (AMC), Exit, Parmelia, Success, Calista and Stirling channels provided by Fremantle Ports Authority (FPA). Data from Geosciences Australia and General Bathymetric Chart of the Oceans (GEBCO) were used to complement the bathymetric information</p>
-<div id="bathymetry" class="section level3 hasAnchor" number="3.2.1">
-<h3><span class="header-section-number">3.2.1</span> Bathymetry<a href="section.html#bathymetry" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The hydrodynamic model domain is shown in Figure <a href="section.html#fig:model-mesh">3.1</a>(left) and extends from Mandurah in the south to Quinns Rock (10 km North of JoondaluP) in the north, covering approximately 125 km of coastline. Offshore the model extends approximately 42 km into the Indian Ocean to depths greater than 250 m.
+The model consists of 29837 horizontal mesh cells with dimensions varying from approximately 2.0 km at the offshore boundary, and decreasing to 100 m in the vicinity of the Sound. Figure <a href="section.html#fig:model-mesh">3.1</a>(right) shows a detail of the model mesh in the study area which includes the downstream waterways of the <a href="https://en.wikipedia.org/wiki/Swan_River_(Western_Australia)">Swan River</a>.
+A 10 m digital elevation model (DEM) was adapted for the study area from a previously completed modelling project <span class="citation">(<a href="#ref-BMT2017" role="doc-biblioref">BMT 2017</a>)</span>. A range of data sources were used for the bathymetry, including finer resolution multibeam data from the Australian Marine Complex (AMC) and Fremantle Ports Authority (FPA). Data from Geosciences Australia and General Bathymetric Chart of the Oceans (GEBCO) were used to complement the model domain bathymetry.</p>
+<div class="figure"><span style="display:block;" id="fig:model-mesh"></span>
+<img src="images/A11348_000_001_02meshA4_20221116.jpeg" alt="Hydrodynamic model domain and bathymetry" width="80%" />
+<p class="caption">
+Figure 3.1: Hydrodynamic model domain and bathymetry
+</p>
 </div>
 </div>
 <div id="boundary-conditions" class="section level2 hasAnchor" number="3.3">
 <h2><span class="header-section-number">3.3</span> Boundary conditions<a href="section.html#boundary-conditions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="metrological-data" class="section level3 hasAnchor" number="3.3.1">
-<h3><span class="header-section-number">3.3.1</span> Metrological data<a href="section.html#metrological-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The local hydrodynamics predicted by TUFLOW FV are influenced by boundary inputs. Information regarding appropriate boundary condition forcing for the study area was obtained from different sources. Details of the specific information sources used to the develop boundary conditions applied to the hydrodynamic model is proved below.</p>
+<div id="roms-data" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> ROMS data<a href="section.html#roms-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><a href="https://www.myroms.org/">ROMS</a> is a free-surface, primitive equations ocean model widely used by the scientific community for a diverse range of applications.ROMS is used by UWA researchers through the whole state: from the Kimberley region to
+the north extending into south‐Australia. Within this domain there are a number of applications
+focussing on specific regions and processes.</p>
+<p>The regional model extends from the Kimberley to Bass Strait, and has a few sub domains (ex, (north‐west, central‐west and south‐wes) with 1‐2 km horizontal resol)and 30 sigma layers in the vertical water column. The model was forced with daily atmospheric (wind and air pressure) and air
+sea fluxes (heat and freshwater). The model open boundaries were specified with monthly salinity and temperature climatology. The model forcing included tides and monthly mean sea levels. The model initial and forcing data (2000‐2010) were extracted from various global and Australian oceanographic/meteorological data sources and interpolated in to surface horizontal mesh and open boundary vertical sections.</p>
+<p>It has a generalized vertical, terrain-following, coordinate system.</p>
 </div>
 <div id="tidal-data" class="section level3 hasAnchor" number="3.3.2">
 <h3><span class="header-section-number">3.3.2</span> Tidal data<a href="section.html#tidal-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -206,6 +213,12 @@ A 10 m digital elevation model (DEM) was generated for the study area from a ran
 <div id="inflow-and-discharge-data" class="section level3 hasAnchor" number="3.3.5">
 <h3><span class="header-section-number">3.3.5</span> Inflow and discharge data<a href="section.html#inflow-and-discharge-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-BMT2017" class="csl-entry">
+BMT. 2017. <em><a href="">Perth Desalination Plant Discharge Modelling: Model Validation. Reference: R.B22253.002.01.ModelValidation.docx. 29 Pp.</a></em>
 </div>
 </div>
             </section>

@@ -14,16 +14,34 @@ MATLAB and Python visualisation libraries are available for download on the TUFL
 ## Model domain, mesh and bathymetry 
 
 
-The hydrodynamic model domain is shown in Figure 4-1 and extends from Mandurah in the south to Quinns Rock (10 km North of JoondaluP) in the north, covering approximately 400 km of coastline. Offshore the model extends approximately 140 km into the Indian Ocean to depths greater than 4 000 m.
-The model consists of 16 014 horizontal mesh cells with dimensions varying from approximately 9.0 km at the offshore boundary, and decreasing to 50 m in the vicinity of the PSDP (and proposed future) outfall diffuser. Figure 4-2 shows a detail of the model mesh in the study area.
-A 10 m digital elevation model (DEM) was generated for the study area from a range of data sources (Table 4-1). In particular, the DEM was supplemented with finer resolution multibeam data over the Australian Marine Complex (AMC), Exit, Parmelia, Success, Calista and Stirling channels provided by Fremantle Ports Authority (FPA). Data from Geosciences Australia and General Bathymetric Chart of the Oceans (GEBCO) were used to complement the bathymetric information
+The hydrodynamic model domain is shown in Figure \@ref(fig:model-mesh)(left) and extends from Mandurah in the south to Quinns Rock (10 km North of JoondaluP) in the north, covering approximately 125 km of coastline. Offshore the model extends approximately 42 km into the Indian Ocean to depths greater than 250 m.
+The model consists of 29837 horizontal mesh cells with dimensions varying from approximately 2.0 km at the offshore boundary, and decreasing to 100 m in the vicinity of the Sound. Figure \@ref(fig:model-mesh)(right) shows a detail of the model mesh in the study area which includes the downstream waterways of the [Swan River](https://en.wikipedia.org/wiki/Swan_River_(Western_Australia)).
+A 10 m digital elevation model (DEM) was adapted for the study area from a previously completed modelling project [@BMT2017]. A range of data sources were used for the bathymetry, including finer resolution multibeam data from the Australian Marine Complex (AMC) and Fremantle Ports Authority (FPA). Data from Geosciences Australia and General Bathymetric Chart of the Oceans (GEBCO) were used to complement the model domain bathymetry.
 
 
-### Bathymetry
+```{r model-mesh, fig.cap='Hydrodynamic model domain and bathymetry', out.width='80%',echo=FALSE,}
+# include images created outside R
+knitr::include_graphics("images/A11348_000_001_02meshA4_20221116.jpeg")
+```
+
 
 ## Boundary conditions
 
-### Metrological data
+The local hydrodynamics predicted by TUFLOW FV are influenced by boundary inputs. Information regarding appropriate boundary condition forcing for the study area was obtained from different sources. Details of the specific information sources used to the develop boundary conditions applied to the hydrodynamic model is proved below.
+
+
+
+### Tide, regional currents, wind and ROMS data
+
+The TUFLOWFV hydrodynamic model was provided with tides, regional current forcing (residual water level, current magnitude and direction), temperature and salinity profiles at the open boundary.
+
+These data were provided by UWA as they sourced these from [ROMS](https://www.myroms.org/). It is a free-surface, primitive equations ocean model widely used by the scientific community for a diverse range of applications [@Haidvogel2000]. ROMS is used by UWA researchers through the whole state: from the Kimberley region to the north extending into south‐Australia. Within this domain there are a number of applications focussing on specific regions and processes [@Middleton2012].
+
+The ROMS regional model extends from the Kimberley to Bass Strait, and has a few sub domains (ex;north-west, central-west and south-west) with 1-2 km horizontal resolution and 30 sigma layers in the vertical water column [@Middleton2012]. As described in Middleton et al (2012), the model was forced with daily atmospheric (wind and air pressure) and air sea fluxes (heat and freshwater). The model open boundaries were specified with monthly salinity and temperature climatology. The model forcing included tides and monthly mean sea levels. The model initial and forcing data were extracted from various global and Australian oceanographic/meteorological data sources and interpolated in to surface horizontal mesh and open boundary vertical sections. Details of the numerical algorithm of ROMS have been described in [@Shchepetkin2005].
+
+
+
+It has a generalized vertical, terrain-following, coordinate system.
 
 ### Tidal data
 
