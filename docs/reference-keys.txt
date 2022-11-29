@@ -50,3 +50,5 @@ open-ocean-boundary-data-1
 wave-data-1
 inflow-and-discharge-data-1
 key-model-components
+section
+model-domain-mesh-and-bathymetry

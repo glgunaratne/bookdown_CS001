@@ -44,7 +44,7 @@ Cockburn Sound extends approximately 15 km from north to south and up to 9 km fr
 Waters immediately north of the Sound (i.e. between Carnac Island and Owen Anchorage) sit on a sill that is relatively shallow with depths ranging between 2.0 and 5.0 m. Success and Parmelia Channel with depths of approximately 15.0 m deep are routinely dredged to allow shipping traffic in and out of Cockburn Sound. A range of shipping channels inside the Sound provides access to the local industry berths, including Woodman Channel, Jervoise Channel, Median Channel, Calista Channel and Stirling Channel. In particular, Calista and Stirling channels are relevant for the movement of the PDSP brine effluent in Cockburn Sound [@CWR2007].
 
 
-```{r CS-locality, fig.cap='key channels and outfalls in the Cockburn Sound', out.width='80%',echo=FALSE,}
+```{r CS-locality, fig.cap='Key channels and outfalls in the Cockburn Sound', out.width='80%',echo=FALSE,}
 # include images created outside R
 knitr::include_graphics("images/CS_locality.png")
 ```
