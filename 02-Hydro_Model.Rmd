@@ -35,11 +35,11 @@ The local hydrodynamics predicted by TUFLOW FV are influenced by boundary inputs
 
 The TUFLOWFV hydrodynamic model was provided with tides, regional current forcing (residual water level, current magnitude and direction), temperature and salinity profiles at the open boundary.
 
-These data were provided by UWA as they sourced these from [ROMS](https://www.myroms.org/). It is a free-surface, primitive equations ocean model widely used by the scientific community for a diverse range of applications [@Haidvogel2000]. ROMS is used by UWA researchers through the whole state: from the Kimberley region to the north extending into south‐Australia. Within this domain there are a number of applications focussing on specific regions and processes [@Middleton2012].
+These data were provided by UWA as they sourced these from [ROMS](https://www.myroms.org/) (Regional Ocean Modelling System). It is a free-surface, primitive equations ocean model widely used by the scientific community for a diverse range of applications [@Haidvogel2000]. ROMS is used by UWA researchers through the whole state: from the Kimberley region to the north extending into South Australia. Within this domain there are a number of applications focusing on specific regions and processes [@Middleton2012].
 
 The ROMS regional model extends from the Kimberley to Bass Strait, and has a few sub domains (ex;north-west, central-west and south-west) with 1-2 km horizontal resolution and 30 sigma layers in the vertical water column [@Middleton2012]. As described in Middleton et al (2012), the model was forced with daily atmospheric (wind and air pressure) and air sea fluxes (heat and freshwater). The model open boundaries were specified with monthly salinity and temperature climatology. The model forcing included tides and monthly mean sea levels. The model initial and forcing data were extracted from various global and Australian oceanographic/meteorological data sources and interpolated in to surface horizontal mesh and open boundary vertical sections. Details of the numerical algorithm of ROMS have been described in [@Shchepetkin2005].
 
-It has a generalized vertical, terrain-following, coordinate system. In addition to that, horizontal velocity components, salinity and temperatures are computed on separate grids (\@ref(fig:stv-grid)). ROMS data were post-processed to make it compatible with the TUFLOFV model mesh.
+It has a generalized vertical, terrain-following, coordinate system. In addition to that, horizontal velocity components, salinity and temperatures are computed on separate grids (Figure \@ref(fig:stv-grid)). Spatial resolution of ROMS data were post processed to linearly interpolate onto the TUFLOWFV model mesh. The locations at which ROMS data were sourced are shown in Figure \@ref(fig:roms-locations).
 
 
 ```{r stv-grid, fig.cap='A snapshot of ROMS seprate grids for salinity, temeperatire and velocty components', out.width='80%',echo=FALSE,}
@@ -48,9 +48,68 @@ knitr::include_graphics("images/stv_roms_grid_conversion.png")
 ```
 
 
-### BARRA - Wave data
 
-### Inflow and discharge data
+```{r roms-locations, fig.cap='ROMS data sourcing locations', out.width='80%',echo=FALSE,}
+# include images created outside R
+knitr::include_graphics("images/ROMS_data_locations.jpg")
+```
+
+
+
+### BARRA - Atmospheric data
+
+Atmospheric boundary condition data including
+
+* air temperature
+
+* downward long-wave radiation
+
+* downward short-wave radiation
+
+* mean sea level pressure
+
+* precipitation rate
+
+* relative humidity
+
+* wind magnitude and direction at 10m
+
+were sourced from [BARRA](http://www.bom.gov.au/research/projects/reanalysis/). BARRA is designed for providing multi-decadal (1990-2019) high spatial and temporal resolution, meteorological data from surface to lower stratosphere.  BARRA-R Regional 12 km domain within the light blue dotted box, covers all of Australia, New Zealand and the maritime continent. Smaller black boxes are the 1.5km subdomains centred over some major Australian cities, Sydney, Hobart, Adelaide and Perth (Figure \@ref(fig:barra-domain)).
+
+
+Sourced reanalyses data and then applied to TUFLOW FV to support its simulation of water column heat dynamics. These model input fields were spatially uniform (i.e. gridded) but varied in time in order to represent both seasonal and higher-frequency variations (e.g. diurnal, weekly, etc..). The locations at which these data were sourced are shown in Figure \@ref(fig:barra-locations).
+
+
+```{r barra-domain, fig.cap='BARRA domains and sub-domains (Sourced from BOM http://www.bom.gov.au/research/projects/reanalysis/)', out.width='80%',echo=FALSE,}
+# include images created outside R
+knitr::include_graphics("images/barra_domain.png")
+```
+
+
+```{r barra-locations, fig.cap='BARRA data sourcing locations', out.width='80%',echo=FALSE,}
+# include images created outside R
+knitr::include_graphics("images/barra_extentv2.png")
+```
+
+### Inflow - Swan River 
+
+Freshwater flows draining to the Swan-Canning River estuary were also accounted for in the model. Canning river site and Narrows Bridge site were selected as tidal boundaries of the Swan River, based on data availability and the locality (Figure \@ref(fig:swanriver-bc)). Swan River boundary condition data including water level, salinity, temperature and nutrients were provided by UWA. Water level data at two tidal boundaries of the Swan river is shown in Figure \@ref(fig:swanriver-wl)
+
+
+```{r swanriver-bc, fig.cap='Tidal boundary locations (Canning River site Narrows Bridge site) in the downstream area of the Swan River', out.width='80%',echo=FALSE,}
+# include images created outside R
+knitr::include_graphics("images/SwanRiver_BC.png")
+```
+
+```{r swanriver-wl, fig.cap='Daily water level changes at Canning River site Narrows Bridge site from 2010-2021', out.width='80%',echo=FALSE,}
+# include images created outside R
+knitr::include_graphics("images/swan_river_WL.png")
+```
+
+
+
+
+### Discharges and Intakes
 
 
 # Model Calibration
