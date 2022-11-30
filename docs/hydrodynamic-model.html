@@ -51,6 +51,8 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -255,13 +257,118 @@ Figure 3.7: Daily water level changes at Canning River site Narrows Bridge site 
 </div>
 <div id="discharges-and-intakes" class="section level3 hasAnchor" number="3.3.4">
 <h3><span class="header-section-number">3.3.4</span> Discharges and Intakes<a href="hydrodynamic-model.html#discharges-and-intakes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table class=" lightable-paper lightable-hover" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Boundary condition
+</th>
+<th style="text-align:left;">
+Flow rate (<span class="math inline">\(m^{3}\)</span>/s)
+</th>
+<th style="text-align:left;">
+Temperature (<span class="math inline">\(^0\)</span>C)
+</th>
+<th style="text-align:left;">
+Salinity
+</th>
+<th style="text-align:left;">
+DO
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+PSDP
+</td>
+<td style="text-align:left;width: 5em; ">
+4.1
+</td>
+<td style="text-align:left;width: 6em; ">
+N/A
+</td>
+<td style="text-align:left;width: 6em; ">
+N/A
+</td>
+<td style="text-align:left;">
+N/A
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Kwinana Power Station Stage A and B
+</td>
+<td style="text-align:left;width: 5em; ">
+9.2
+</td>
+<td style="text-align:left;width: 6em; ">
+Ambient + 9
+</td>
+<td style="text-align:left;width: 6em; ">
+Ambient
+</td>
+<td style="text-align:left;">
+100% saturation at Discharge
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cockburn Power Station and Kwinana Power Station Stage C
+</td>
+<td style="text-align:left;width: 5em; ">
+9.82
+</td>
+<td style="text-align:left;width: 6em; ">
+Ambient + 9
+</td>
+<td style="text-align:left;width: 6em; ">
+Ambient
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BP Refinery
+</td>
+<td style="text-align:left;width: 5em; ">
+5.4
+</td>
+<td style="text-align:left;width: 6em; ">
+Ambient + 13.83
+</td>
+<td style="text-align:left;width: 6em; ">
+Ambient - 0.38
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Tiwest
+</td>
+<td style="text-align:left;width: 5em; ">
+0.125 (No Intake)
+</td>
+<td style="text-align:left;width: 6em; ">
+Ambient +3
+</td>
+<td style="text-align:left;width: 6em; ">
+24
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 <h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-BMT2017" class="csl-entry">
-BMT. 2017. <span>“<a href="">Perth Desalination Plant Discharge Modelling: Model Validation. Reference: R.B22253.002.01.ModelValidation.docx. 29 Pp.</a>”</span> Technical Report,BMT Australia Ltd.
+BMT. 2017. <span>“<a href="">Perth Desalination Plant Discharge Modelling: Model Validation</a>.”</span> Reference: r.B22253.002.01.ModelValidation.docx. Technical Report,BMT Australia Ltd.
 </div>
 <div id="ref-Haidvogel2000" class="csl-entry">
 Haidvogel DB, Hedstrom K, Arango HG. 2000. <span>“Model Evaluation Experiments in the North Atlantic Basin: Simulations in Nonlinear Terrain-Following Coordinates.”</span> <em>Dynamic Atmospheric Oceans</em> 32 (3-4): 239–81. <a href="https://doi.org/10.1016/S0377-0265(00)00049-X">https://doi.org/10.1016/S0377-0265(00)00049-X</a>.
@@ -333,6 +440,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

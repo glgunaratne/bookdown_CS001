@@ -1,0 +1,6 @@
+Boundary condition,Flow rate,Temperature,Salinity,DO
+PSDP,4.1,N/A,N/A,N/A
+Kwinana Power Station Stage A and B,9.2,Ambient + 9,Ambient,100% saturation at Discharge
+Cockburn Power Station and Kwinana Power Station Stage C,9.82,Ambient + 9,Ambient,
+BP Refinery,5.4,Ambient + 13.83,Ambient - 0.38,
+Tiwest,0.125 (No Intake),Ambient +3,24,
