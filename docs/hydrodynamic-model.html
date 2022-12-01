@@ -51,8 +51,6 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -257,17 +255,22 @@ Figure 3.7: Daily water level changes at Canning River site Narrows Bridge site 
 </div>
 <div id="discharges-and-intakes" class="section level3 hasAnchor" number="3.3.4">
 <h3><span class="header-section-number">3.3.4</span> Discharges and Intakes<a href="hydrodynamic-model.html#discharges-and-intakes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<table class=" lightable-paper lightable-hover" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
+<table>
+<caption>
+<span id="tab:dis-table">Table 3.1: </span>Industrial discharges and intakes boundary conditions
+</caption>
 <thead>
 <tr>
 <th style="text-align:left;">
 Boundary condition
 </th>
 <th style="text-align:left;">
-Flow rate (<span class="math inline">\(m^{3}\)</span>/s)
+Flow rate
+(<span class="math inline">\(m^{3}\)</span>/s)
 </th>
 <th style="text-align:left;">
-Temperature (<span class="math inline">\(^0\)</span>C)
+Temperature
+(<span class="math inline">\(^0\)</span>C)
 </th>
 <th style="text-align:left;">
 Salinity
@@ -282,13 +285,30 @@ DO
 <td style="text-align:left;">
 PSDP
 </td>
-<td style="text-align:left;width: 5em; ">
+<td style="text-align:left;">
 4.1
 </td>
-<td style="text-align:left;width: 6em; ">
+<td style="text-align:left;">
 N/A
 </td>
-<td style="text-align:left;width: 6em; ">
+<td style="text-align:left;">
+N/A
+</td>
+<td style="text-align:left;">
+N/A
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SDOOL
+</td>
+<td style="text-align:left;">
+0.28
+</td>
+<td style="text-align:left;">
+N/A
+</td>
+<td style="text-align:left;">
 N/A
 </td>
 <td style="text-align:left;">
@@ -299,13 +319,13 @@ N/A
 <td style="text-align:left;">
 Kwinana Power Station Stage A and B
 </td>
-<td style="text-align:left;width: 5em; ">
+<td style="text-align:left;">
 9.2
 </td>
-<td style="text-align:left;width: 6em; ">
+<td style="text-align:left;">
 Ambient + 9
 </td>
-<td style="text-align:left;width: 6em; ">
+<td style="text-align:left;">
 Ambient
 </td>
 <td style="text-align:left;">
@@ -316,13 +336,13 @@ Ambient
 <td style="text-align:left;">
 Cockburn Power Station and Kwinana Power Station Stage C
 </td>
-<td style="text-align:left;width: 5em; ">
+<td style="text-align:left;">
 9.82
 </td>
-<td style="text-align:left;width: 6em; ">
+<td style="text-align:left;">
 Ambient + 9
 </td>
-<td style="text-align:left;width: 6em; ">
+<td style="text-align:left;">
 Ambient
 </td>
 <td style="text-align:left;">
@@ -332,13 +352,13 @@ Ambient
 <td style="text-align:left;">
 BP Refinery
 </td>
-<td style="text-align:left;width: 5em; ">
+<td style="text-align:left;">
 5.4
 </td>
-<td style="text-align:left;width: 6em; ">
+<td style="text-align:left;">
 Ambient + 13.83
 </td>
-<td style="text-align:left;width: 6em; ">
+<td style="text-align:left;">
 Ambient - 0.38
 </td>
 <td style="text-align:left;">
@@ -348,13 +368,13 @@ Ambient - 0.38
 <td style="text-align:left;">
 Tiwest
 </td>
-<td style="text-align:left;width: 5em; ">
+<td style="text-align:left;">
 0.125 (No Intake)
 </td>
-<td style="text-align:left;width: 6em; ">
+<td style="text-align:left;">
 Ambient +3
 </td>
-<td style="text-align:left;width: 6em; ">
+<td style="text-align:left;">
 24
 </td>
 <td style="text-align:left;">

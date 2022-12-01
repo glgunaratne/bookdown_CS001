@@ -114,16 +114,17 @@ knitr::include_graphics("images/swan_river_WL.png")
 dis<-read.csv(file="table/cs_discharges.csv")
 #head(dis)
 #library(kableExtra)
-dis %>%
-  #df %>% kbl(col.names=c("$m_{pg}$","$c^{yy}$"))%>%
-  kbl(col.names = c("Boundary condition","Flow rate ($m^{3}$/s)","Temperature ($^0$C)","Salinity","DO"),
-      booktabs = TRUE, escape = FALSE) %>%
-  kable_paper("hover", full_width = F)%>%
-  column_spec(c(3,4), width = "6em")%>%
-  column_spec(2, width = "4em")
+# dis %>%
+#   #df %>% kbl(col.names=c("$m_{pg}$","$c^{yy}$"))%>%
+#   kbl(col.names = c("Boundary condition","Flow rate ($m^{3}$/s)","Temperature ($^0$C)","Salinity","DO"),
+#       booktabs = TRUE, escape = FALSE) %>%
+#   kable_paper("hover", full_width = F)%>%
+#   column_spec(c(3,4), width = "6em")%>%
+#   column_spec(2, width = "4em")
 
 
-#knitr::kable(dis, booktabs = TRUE, caption = 'Industrial discharges and intakes boundary conditions')
+knitr::kable(dis, booktabs = TRUE, caption = 'Industrial discharges and intakes boundary conditions', 
+             col.names = c("Boundary condition","Flow rate\n($m^{3}$/s)","Temperature\n($^0$C)","Salinity","DO"))
 ```
 
 

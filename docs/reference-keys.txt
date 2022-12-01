@@ -8,6 +8,7 @@ fig:barra-domain
 fig:barra-locations
 fig:swanriver-bc
 fig:swanriver-wl
+tab:dis-table
 about
 project-description
 study-site-description
