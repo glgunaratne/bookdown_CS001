@@ -1,5 +1,10 @@
 output_dir: "docs"
 delete_merged_file: true
+rmd_files:
+  html: ["index.Rmd", "01-Integrated_modelling_approach.Rmd","02-HydroModel.Rmd","03-WaveModel.Rmd","04-Model_simulation.Rmd"]
+  latex: ["index.Rmd", "01-Integrated_modelling_approach.Rmd","02-HydroModel.Rmd","03-WaveModel.Rmd","04-Model_simulation.Rmd"]
+  epub: ["index.Rmd", "01-Integrated_modelling_approach.Rmd","02-HydroModel.Rmd","03-WaveModel.Rmd","04-Model_simulation.Rmd"]
+  word: ["index.Rmd", "01-Integrated_modelling_approach.Rmd","02-HydroModel.Rmd","03-WaveModel.Rmd","04-Model_simulation.Rmd"]
 language:
   ui:
     chapter_name: "Chapter "

@@ -1,4 +1,4 @@
-# Hydrodynamics and Waves
+# Hydrodynamic Modelling 
 
 ## TUFLOFV 3D Hydrodynamic Model
 
@@ -132,46 +132,32 @@ knitr::kable(dis, booktabs = TRUE, caption = 'Industrial discharges and intakes 
 knitr::include_graphics("images/A11348_000_001_03locA4_20221118.jpg")
 ```
 
+## Model Parameterisation
 
-## SWAN Wave Model
+### Vertical discretisation
 
-Wave modelling was included in the assessment to capture sediment resuspension and dispersion from wave action in shallow areas, likely to be significant in determining sediment plume behaviour. The wave modelling component of these assessments has been undertaken using the third generation wave model Simulating WAves Nearshore (SWAN). It is an Eulerian formulation of the discrete action balance equation [@Booji1996]. Since it preserves the action density in ambient currents, it was selected as a tool to perform the required simulations of wave-current interaction. SWAN simulates wave/swell propagation in two-dimensions, including shoaling and refraction due to spatial variations in bathymetry and currents. This is a global industry standard modelling package that has been applied with reliable results to many investigations worldwide.
-
-For sediment re-suspension and dispersion modelling the SWAN wave model was coupled with the 3D TUFLOW FV hydrodynamic and advection-dispersion models. This required the wave simulations to be completed separately, with the model output stored at hourly intervals on regular grids. During the subsequent sediment re-suspension and dispersion simulations, the wave conditions were linearly interpolated spatially from the grids to the TUFLOW FV mesh.
-
-Previously used calibrated SWAN model [@BMT2022] was recommissioned for this work. 
-
-### Model Domain
-
-A two-grid nesting approach was adopted for the study. The grid set-up was as follows:
-
-* A regional-scale model, A-grid, (Figure \@ref(fig:wave-domian)) was set up in order to introduce the offshore wave forcing conditions to the study area. A-grid covers an area of approximately 76.5 km (east-west) by 112.6 km (north-south). To ensure that the wave transformation over the nearshore shelf is properly replicated by the wave model the domain extended offshore to 500 m water depth. The size of the regional scale domain enabled the input of spatially and temporally variable offshore wave conditions across the boundaries. The regional scale model was forced by several offshore wave data points obtained from global wave models. This approach is considered significantly more robust than the conventional method using one point of measured (or modelled) data as the offshore boundary. Adopting this approach, the modelling framework captured the offshore wave variability across the boundaries resulting in more accurate and reliable nearshore wave predictions.
-
-* An intermediate scale model, B-grid, (Figure \@ref(fig:wave-domian)) was set up to refine the resolution of the solutions from A-grid; B-grid extends approximately 43 km offshore and 75 km alongshore. 
+The hydrodynamic model was undertaken in 3D baroclinic mode adopting a hybrid sigma/z-coordinate layer scheme. Between the model surface and -3.0 mMSL four flexible sigma layers were applied and were able to vary in vertical thickness depending on the tidally dominated changes in water surface elevation. Below -3.0 mMSL a z-coordinate scheme was applied with vertical layer thicknesses of 0.5 m in shallow water (between depths of -3.0 mMSL and -22.0 mMSL) increasing in deeper offshore areas beyond the edge of the continental shelf. A maximum of 30 z-layers were resolved in the deeper sections of the model domain. This high degree of vertical resolution in the top 22.0 m of the water column was necessary in order to simulate vertical stratification within the water column. 
 
 
+### Active scalars 
+
+Salinity and temperature were simulated within the model as density-coupled scalar constituents in order to incorporate baroclinic density gradient forcing and more importantly the effect of vertical density stratification on turbulent mixing in the water column. 
 
 
-```{r wave-domian, fig.cap='Key discharge and intake locations in the Cockburn Sound', out.width='80%',echo=FALSE,}
-# include images created outside R
-knitr::include_graphics("images/swan_wave_model_domain.png")
+### Bottom roughness
+A default global default bottom roughness length scale (ks) of 0.002 m was used except in at the edge of the shelf, where ks was set to 0.2 m with spatial reconstruction used within Cockburn Sound to capture the domain transitioning from the shallow eastern shelf to the waters in the deep central basin. The adjustment of the local values for ks was undertaken as part of the hydrodynamic model calibration process conducted at Cockburn Sound scale (BMT 2022). 
+
+### Turbulence closure scheme
+The General Ocean Turbulence Model (GOTM) was coupled with the 3D TUFLOW FV hydrodynamic model in order to simulate the vertical mixing processes in the presence of density stratification (http://www.gotm.net/).
+
+
+Further details of the TUFLOW FV model configuration and parameterisation are summarised in Table \@ref(tab:param-table). 
+
+
+```{r param-table,echo=FALSE,}
+param<-read.csv(file="table/model_param.csv")
+
+knitr::kable(param, booktabs = TRUE, caption = 'Summary of TUFLOW FV model configuration and parameterisation',
+             col.names = c("Model Configuration Description","Model/Value"))
 ```
-
-# Model Calibration
-
-
-## Data Sourcing
-
-
-### ADCP data 
-
-### Currents
-
-
-### Waves
-
-
-### Tempearure and Salinity
-
-## Model validation
 

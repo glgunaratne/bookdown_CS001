@@ -1,0 +1,44 @@
+# Wave Modelling
+
+## SWAN Wave Model
+
+Wave modelling was included in the assessment to capture sediment resuspension and dispersion from wave action in shallow areas, likely to be significant in determining sediment plume behaviour. The wave modelling component of these assessments has been undertaken using the third generation wave model Simulating WAves Nearshore (SWAN). It is an Eulerian formulation of the discrete action balance equation [@Booji1996]. Since it preserves the action density in ambient currents, it was selected as a tool to perform the required simulations of wave-current interaction. SWAN simulates wave/swell propagation in two-dimensions, including shoaling and refraction due to spatial variations in bathymetry and currents. This is a global industry standard modelling package that has been applied with reliable results to many investigations worldwide.
+
+For sediment re-suspension and dispersion modelling the SWAN wave model was coupled with the 3D TUFLOW FV hydrodynamic and advection-dispersion models. This required the wave simulations to be completed separately, with the model output stored at hourly intervals on regular grids. During the subsequent sediment re-suspension and dispersion simulations, the wave conditions were linearly interpolated spatially from the grids to the TUFLOW FV mesh.
+
+Previously used calibrated SWAN model [@BMT2022] was recommissioned for this work. 
+
+### Model Domain
+
+A two-grid nesting approach was adopted for the study. The grid set-up was as follows:
+
+* A regional-scale model, A-grid, (Figure \@ref(fig:wave-domian)) was set up in order to introduce the offshore wave forcing conditions to the study area. A-grid covers an area of approximately 76.5 km (east-west) by 112.6 km (north-south). To ensure that the wave transformation over the nearshore shelf is properly replicated by the wave model the domain extended offshore to 500 m water depth. The size of the regional scale domain enabled the input of spatially and temporally variable offshore wave conditions across the boundaries. The regional scale model was forced by several offshore wave data points obtained from global wave models. This approach is considered significantly more robust than the conventional method using one point of measured (or modelled) data as the offshore boundary. Adopting this approach, the modelling framework captured the offshore wave variability across the boundaries resulting in more accurate and reliable nearshore wave predictions.
+
+* An intermediate scale model, B-grid, (Figure \@ref(fig:wave-domian)) was set up to refine the resolution of the solutions from A-grid; B-grid extends approximately 43 km offshore and 75 km alongshore. 
+
+The domain size and model resolutions are outlined in Table \@ref(tab:wave-table).
+
+
+```{r wave-domian, fig.cap='Key discharge and intake locations in the Cockburn Sound', out.width='80%',echo=FALSE,}
+# include images created outside R
+knitr::include_graphics("images/swan_wave_model_domain.png")
+```
+
+
+
+```{r wave-table,echo=FALSE,}
+wave<-read.csv(file="table/wave_model _domain.csv")
+
+knitr::kable(wave, booktabs = TRUE, caption = 'SWAN wave model domain characteristics',
+             col.names = c("Model description","Grid name","Model X length","Model Y length","Model resolution"))
+```
+
+
+
+
+
+
+
+
+
+
