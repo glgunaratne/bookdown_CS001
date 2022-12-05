@@ -1,4 +1,4 @@
-# Hydrodynamic Model
+# Hydrodynamics and Waves
 
 ## TUFLOFV 3D Hydrodynamic Model
 
@@ -11,7 +11,7 @@ MATLAB and Python visualisation libraries are available for download on the TUFL
 
 
 
-## Model domain, mesh and bathymetry 
+### Model domain, mesh and bathymetry 
 
 
 The hydrodynamic model domain is shown in Figure \@ref(fig:model-mesh)(left) and extends from Mandurah in the south to Quinns Rock (10 km North of JoondaluP) in the north, covering approximately 125 km of coastline. Offshore the model extends approximately 42 km into the Indian Ocean to depths greater than 250 m.
@@ -25,13 +25,13 @@ knitr::include_graphics("images/A11348_000_001_02meshA4_20221116.jpeg")
 ```
 
 
-## Boundary conditions
+### Boundary conditions
 
 The local hydrodynamics predicted by TUFLOW FV are influenced by boundary inputs. Information regarding appropriate boundary condition forcing for the study area was obtained from different sources. Details of the specific information sources used to the develop boundary conditions applied to the hydrodynamic model is proved below.
 
 
 
-### ROMS - Tide, regional currents, salinity and temperature
+#### ROMS - Tide, regional currents, salinity and temperature
 
 The TUFLOWFV hydrodynamic model was provided with tides, regional current forcing (residual water level, current magnitude and direction), temperature and salinity profiles at the open boundary.
 
@@ -56,7 +56,7 @@ knitr::include_graphics("images/ROMS_data_locations.jpg")
 
 
 
-### BARRA - Atmospheric data
+#### BARRA - Atmospheric data
 
 Atmospheric boundary condition data including
 
@@ -91,7 +91,7 @@ knitr::include_graphics("images/barra_domain.png")
 knitr::include_graphics("images/barra_extentv2.png")
 ```
 
-### Inflow - Swan River 
+#### Inflow - Swan River 
 
 Freshwater flows draining to the Swan-Canning River estuary were also accounted for in the model. Canning river site and Narrows Bridge site were selected as tidal boundaries of the Swan River, based on data availability and the locality (Figure \@ref(fig:swanriver-bc)). Swan River boundary condition data including water level, salinity, temperature and nutrients were provided by UWA. Water level data at two tidal boundaries of the Swan river is shown in Figure \@ref(fig:swanriver-wl)
 
@@ -107,29 +107,55 @@ knitr::include_graphics("images/swan_river_WL.png")
 ```
 
 
-### Discharges and Intakes
+#### Discharges and Intakes
 
+Intakes and outfalls for other industries operating in Cockburn Sound were adopted in the model. These data were sourced from previous BMT projects [@BMT2014;@BMT2017] are summarised in Table \@ref(tab:dis-table). The relevant intake and discharge locations are shown in Figure \@ref(fig:dis-locations). A 100% DO saturation (based on temperature and salinity and @BMT2017) was assumed for the boundary conditions.
 
 ```{r dis-table,echo=FALSE,}
 dis<-read.csv(file="table/cs_discharges.csv")
 #head(dis)
-#library(kableExtra)
+# library(kableExtra)
 # dis %>%
-#   #df %>% kbl(col.names=c("$m_{pg}$","$c^{yy}$"))%>%
-#   kbl(col.names = c("Boundary condition","Flow rate ($m^{3}$/s)","Temperature ($^0$C)","Salinity","DO"),
+#   kbl(col.names = c("Boundary condition","Flow rate\n($m^{3}$/s","Temperature\n($^0$C)","Salinity","DO"),
 #       booktabs = TRUE, escape = FALSE) %>%
+#   #kable_styling() %>%
 #   kable_paper("hover", full_width = F)%>%
-#   column_spec(c(3,4), width = "6em")%>%
-#   column_spec(2, width = "4em")
-
+#   add_footnote("Note:Discharge flow rates the same intake flow rates unless noted. Temperature, salinity and DO not applicable to intakes.", notation="none")
 
 knitr::kable(dis, booktabs = TRUE, caption = 'Industrial discharges and intakes boundary conditions', 
-             col.names = c("Boundary condition","Flow rate\n($m^{3}$/s)","Temperature\n($^0$C)","Salinity","DO"))
+              col.names = c("Boundary condition","Flow rate\n($m^{3}$/s)","Temperature\n($^0$C)","Salinity","DO"))
 ```
 
 
+```{r dis-locations, fig.cap='Key discharge and intake locations in the Cockburn Sound', out.width='80%',echo=FALSE,}
+# include images created outside R
+knitr::include_graphics("images/A11348_000_001_03locA4_20221118.jpg")
+```
 
 
+## SWAN Wave Model
+
+Wave modelling was included in the assessment to capture sediment resuspension and dispersion from wave action in shallow areas, likely to be significant in determining sediment plume behaviour. The wave modelling component of these assessments has been undertaken using the third generation wave model Simulating WAves Nearshore (SWAN). It is an Eulerian formulation of the discrete action balance equation [@Booji1996]. Since it preserves the action density in ambient currents, it was selected as a tool to perform the required simulations of wave-current interaction. SWAN simulates wave/swell propagation in two-dimensions, including shoaling and refraction due to spatial variations in bathymetry and currents. This is a global industry standard modelling package that has been applied with reliable results to many investigations worldwide.
+
+For sediment re-suspension and dispersion modelling the SWAN wave model was coupled with the 3D TUFLOW FV hydrodynamic and advection-dispersion models. This required the wave simulations to be completed separately, with the model output stored at hourly intervals on regular grids. During the subsequent sediment re-suspension and dispersion simulations, the wave conditions were linearly interpolated spatially from the grids to the TUFLOW FV mesh.
+
+Previously used calibrated SWAN model [@BMT2022] was recommissioned for this work. 
+
+### Model Domain
+
+A two-grid nesting approach was adopted for the study. The grid set-up was as follows:
+
+* A regional-scale model, A-grid, (Figure \@ref(fig:wave-domian)) was set up in order to introduce the offshore wave forcing conditions to the study area. A-grid covers an area of approximately 76.5 km (east-west) by 112.6 km (north-south). To ensure that the wave transformation over the nearshore shelf is properly replicated by the wave model the domain extended offshore to 500 m water depth. The size of the regional scale domain enabled the input of spatially and temporally variable offshore wave conditions across the boundaries. The regional scale model was forced by several offshore wave data points obtained from global wave models. This approach is considered significantly more robust than the conventional method using one point of measured (or modelled) data as the offshore boundary. Adopting this approach, the modelling framework captured the offshore wave variability across the boundaries resulting in more accurate and reliable nearshore wave predictions.
+
+* An intermediate scale model, B-grid, (Figure \@ref(fig:wave-domian)) was set up to refine the resolution of the solutions from A-grid; B-grid extends approximately 43 km offshore and 75 km alongshore. 
+
+
+
+
+```{r wave-domian, fig.cap='Key discharge and intake locations in the Cockburn Sound', out.width='80%',echo=FALSE,}
+# include images created outside R
+knitr::include_graphics("images/swan_wave_model_domain.png")
+```
 
 # Model Calibration
 

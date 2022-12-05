@@ -9,6 +9,8 @@ fig:barra-locations
 fig:swanriver-bc
 fig:swanriver-wl
 tab:dis-table
+fig:dis-locations
+fig:wave-domian
 about
 project-description
 study-site-description
@@ -16,7 +18,7 @@ services-description
 deliverables
 integrated-modelling-approach
 key-model-components
-hydrodynamic-model
+hydrodynamics-and-waves
 tuflofv-3d-hydrodynamic-model
 model-domain-mesh-and-bathymetry
 boundary-conditions
@@ -24,6 +26,8 @@ roms---tide-regional-currents-salinity-and-temperature
 barra---atmospheric-data
 inflow---swan-river
 discharges-and-intakes
+swan-wave-model
+model-domain
 model-calibration
 data-sourcing
 adcp-data
@@ -39,6 +43,14 @@ tuflowfv-sediment-transport-module
 uncalibrated-model-outputs
 tss
 suspended-solids
+sediment-transport-model-1
+data-sourcing-2
+sediment-fractions-1
+partcle-size-distribution-1
+tuflowfv-sediment-transport-module-1
+uncalibrated-model-outputs-1
+tss-1
+suspended-solids-1
 footnotes-and-citations
 footnotes
 citations

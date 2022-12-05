@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Hydrodynamics and Waves | Development of a water quality response model for Cockburn Sound</title>
+  <meta name="description" content="A technical Report" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Hydrodynamics and Waves | Development of a water quality response model for Cockburn Sound" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="A technical Report" />
+  <meta name="github-repo" content="glgunaratne/bookdown_CS001" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Hydrodynamics and Waves | Development of a water quality response model for Cockburn Sound" />
+  
+  <meta name="twitter:description" content="A technical Report" />
+  
+
+<meta name="author" content="Gayan Gunaratne Kabir Suara and Louise Bruce" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="integrated-modelling-approach.html"/>
+<link rel="next" href="model-calibration.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Cockburn Sound BGC Model</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#project-description"><i class="fa fa-check"></i><b>1.1</b> Project description</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#study-site-description"><i class="fa fa-check"></i><b>1.2</b> Study site description</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#services-description"><i class="fa fa-check"></i><b>1.3</b> Services Description</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#deliverables"><i class="fa fa-check"></i><b>1.4</b> Deliverables</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="integrated-modelling-approach.html"><a href="integrated-modelling-approach.html"><i class="fa fa-check"></i><b>2</b> Integrated Modelling Approach</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="integrated-modelling-approach.html"><a href="integrated-modelling-approach.html#key-model-components"><i class="fa fa-check"></i><b>2.1</b> Key Model Components</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="hydrodynamics-and-waves.html"><a href="hydrodynamics-and-waves.html"><i class="fa fa-check"></i><b>3</b> Hydrodynamics and Waves</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="hydrodynamics-and-waves.html"><a href="hydrodynamics-and-waves.html#tuflofv-3d-hydrodynamic-model"><i class="fa fa-check"></i><b>3.1</b> TUFLOFV 3D Hydrodynamic Model</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="hydrodynamics-and-waves.html"><a href="hydrodynamics-and-waves.html#model-domain-mesh-and-bathymetry"><i class="fa fa-check"></i><b>3.1.1</b> Model domain, mesh and bathymetry</a></li>
+<li class="chapter" data-level="3.1.2" data-path="hydrodynamics-and-waves.html"><a href="hydrodynamics-and-waves.html#boundary-conditions"><i class="fa fa-check"></i><b>3.1.2</b> Boundary conditions</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="hydrodynamics-and-waves.html"><a href="hydrodynamics-and-waves.html#swan-wave-model"><i class="fa fa-check"></i><b>3.2</b> SWAN Wave Model</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="hydrodynamics-and-waves.html"><a href="hydrodynamics-and-waves.html#model-domain"><i class="fa fa-check"></i><b>3.2.1</b> Model Domain</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="model-calibration.html"><a href="model-calibration.html"><i class="fa fa-check"></i><b>4</b> Model Calibration</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="model-calibration.html"><a href="model-calibration.html#data-sourcing"><i class="fa fa-check"></i><b>4.1</b> Data Sourcing</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="model-calibration.html"><a href="model-calibration.html#adcp-data"><i class="fa fa-check"></i><b>4.1.1</b> ADCP data</a></li>
+<li class="chapter" data-level="4.1.2" data-path="model-calibration.html"><a href="model-calibration.html#currents"><i class="fa fa-check"></i><b>4.1.2</b> Currents</a></li>
+<li class="chapter" data-level="4.1.3" data-path="model-calibration.html"><a href="model-calibration.html#waves"><i class="fa fa-check"></i><b>4.1.3</b> Waves</a></li>
+<li class="chapter" data-level="4.1.4" data-path="model-calibration.html"><a href="model-calibration.html#tempearure-and-salinity"><i class="fa fa-check"></i><b>4.1.4</b> Tempearure and Salinity</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="model-calibration.html"><a href="model-calibration.html#model-validation"><i class="fa fa-check"></i><b>4.2</b> Model validation</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html"><i class="fa fa-check"></i><b>5</b> Sediment Transport Model</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#data-sourcing-1"><i class="fa fa-check"></i><b>5.1</b> Data sourcing</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#sediment-fractions"><i class="fa fa-check"></i><b>5.1.1</b> Sediment fractions</a></li>
+<li class="chapter" data-level="5.1.2" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#partcle-size-distribution"><i class="fa fa-check"></i><b>5.1.2</b> Partcle size distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#tuflowfv-sediment-transport-module"><i class="fa fa-check"></i><b>5.2</b> TUFLOWFV Sediment transport Module</a></li>
+<li class="chapter" data-level="5.3" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#uncalibrated-model-outputs"><i class="fa fa-check"></i><b>5.3</b> Uncalibrated model outputs</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#tss"><i class="fa fa-check"></i><b>5.3.1</b> TSS</a></li>
+<li class="chapter" data-level="5.3.2" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#suspended-solids"><i class="fa fa-check"></i><b>5.3.2</b> Suspended solids</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="sediment-transport-model-1.html"><a href="sediment-transport-model-1.html"><i class="fa fa-check"></i><b>6</b> Sediment Transport Model</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="sediment-transport-model-1.html"><a href="sediment-transport-model-1.html#data-sourcing-2"><i class="fa fa-check"></i><b>6.1</b> Data sourcing</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="sediment-transport-model-1.html"><a href="sediment-transport-model-1.html#sediment-fractions-1"><i class="fa fa-check"></i><b>6.1.1</b> Sediment fractions</a></li>
+<li class="chapter" data-level="6.1.2" data-path="sediment-transport-model-1.html"><a href="sediment-transport-model-1.html#partcle-size-distribution-1"><i class="fa fa-check"></i><b>6.1.2</b> Partcle size distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="sediment-transport-model-1.html"><a href="sediment-transport-model-1.html#tuflowfv-sediment-transport-module-1"><i class="fa fa-check"></i><b>6.2</b> TUFLOWFV Sediment transport Module</a></li>
+<li class="chapter" data-level="6.3" data-path="sediment-transport-model-1.html"><a href="sediment-transport-model-1.html#uncalibrated-model-outputs-1"><i class="fa fa-check"></i><b>6.3</b> Uncalibrated model outputs</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="sediment-transport-model-1.html"><a href="sediment-transport-model-1.html#tss-1"><i class="fa fa-check"></i><b>6.3.1</b> TSS</a></li>
+<li class="chapter" data-level="6.3.2" data-path="sediment-transport-model-1.html"><a href="sediment-transport-model-1.html#suspended-solids-1"><i class="fa fa-check"></i><b>6.3.2</b> Suspended solids</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>7</b> Footnotes and citations</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#footnotes"><i class="fa fa-check"></i><b>7.1</b> Footnotes</a></li>
+<li class="chapter" data-level="7.2" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#citations"><i class="fa fa-check"></i><b>7.2</b> Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://glgunaratne.github.io/bookdown_CS001" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Development of a water quality response model for Cockburn Sound</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="hydrodynamics-and-waves" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Hydrodynamics and Waves<a href="hydrodynamics-and-waves.html#hydrodynamics-and-waves" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="tuflofv-3d-hydrodynamic-model" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> TUFLOFV 3D Hydrodynamic Model<a href="hydrodynamics-and-waves.html#tuflofv-3d-hydrodynamic-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The hydrodynamic modelling was undertaken using the <a href="https://www.tuflow.com/products/tuflow-fv/">TUFLOW FV</a> software, which is developed and distributed by <a href="https://www.bmt.org/">BMT</a>. TUFLOW FV is a numerical hydrodynamic model solving the two-dimensional (2D) and three-dimensional (3D) Non-Linear Shallow Water Equations (NLSWE). The model is suitable for simulating a wide range of hydrodynamic systems ranging in scale from open channels and floodplains, through estuaries to coasts and deep offshore. The three-dimensional model was deployed in this study.</p>
+<p>The Finite-Volume (FV) numerical scheme employed by TUFLOW FV solves the NLSWE on unstructured meshes comprised of triangular and quadrilateral elements. The flexible mesh allows for seamless boundary fitting along complex coastlines or channels as well as accurately and efficiently representing complex bathymetries with a minimum number of computational elements. The flexible mesh capability is particularly efficient at resolving a range of scales in a single model without requiring multiple domain nesting. In the present study, a flexible mesh of triangular elements with varying spatial resolution has been employed. Furthermore, the models developed by BMT incorporate a hybrid (fixed z-sigma) coordinate scheme.</p>
+<p>TUFLOW FV provides various options to vertically average 3D output and thereby simplify post-processing tasks. Both
+MATLAB and Python visualisation libraries are available for download on the TUFLOW website to assist with review and presentation of 3D results. Further details regarding the numerical scheme employed by TUFLOW FV are provided in the <a href="https://downloads.tuflow.com/_archive/TUFLOW_FV/Manual/TUFLOW_FV_User_Manual_2020.pdf">TUFLOW FV Science Manual</a>.</p>
+<div id="model-domain-mesh-and-bathymetry" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Model domain, mesh and bathymetry<a href="hydrodynamics-and-waves.html#model-domain-mesh-and-bathymetry" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The hydrodynamic model domain is shown in Figure <a href="hydrodynamics-and-waves.html#fig:model-mesh">3.1</a>(left) and extends from Mandurah in the south to Quinns Rock (10 km North of JoondaluP) in the north, covering approximately 125 km of coastline. Offshore the model extends approximately 42 km into the Indian Ocean to depths greater than 250 m.
+The model consists of 29837 horizontal mesh cells with dimensions varying from approximately 2.0 km at the offshore boundary, and decreasing to 100 m in the vicinity of the Sound. Figure <a href="hydrodynamics-and-waves.html#fig:model-mesh">3.1</a>(right) shows a detail of the model mesh in the study area which includes the downstream waterways of the <a href="https://en.wikipedia.org/wiki/Swan_River_(Western_Australia)">Swan River</a>.
+A 10 m digital elevation model (DEM) was adapted for the study area from a previously completed modelling project <span class="citation">(<a href="#ref-BMT2017" role="doc-biblioref">BMT 2017</a>)</span>. A range of data sources were used for the bathymetry, including finer resolution multibeam data from the Australian Marine Complex (AMC) and Fremantle Ports Authority (FPA). Data from Geosciences Australia and General Bathymetric Chart of the Oceans (GEBCO) were used to complement the model domain bathymetry.</p>
+<div class="figure"><span style="display:block;" id="fig:model-mesh"></span>
+<img src="images/A11348_000_001_02meshA4_20221116.jpeg" alt="Hydrodynamic model domain and bathymetry" width="80%" />
+<p class="caption">
+Figure 3.1: Hydrodynamic model domain and bathymetry
+</p>
+</div>
+</div>
+<div id="boundary-conditions" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Boundary conditions<a href="hydrodynamics-and-waves.html#boundary-conditions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The local hydrodynamics predicted by TUFLOW FV are influenced by boundary inputs. Information regarding appropriate boundary condition forcing for the study area was obtained from different sources. Details of the specific information sources used to the develop boundary conditions applied to the hydrodynamic model is proved below.</p>
+<div id="roms---tide-regional-currents-salinity-and-temperature" class="section level4 hasAnchor" number="3.1.2.1">
+<h4><span class="header-section-number">3.1.2.1</span> ROMS - Tide, regional currents, salinity and temperature<a href="hydrodynamics-and-waves.html#roms---tide-regional-currents-salinity-and-temperature" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The TUFLOWFV hydrodynamic model was provided with tides, regional current forcing (residual water level, current magnitude and direction), temperature and salinity profiles at the open boundary.</p>
+<p>These data were provided by UWA as they sourced these from <a href="https://www.myroms.org/">ROMS</a> (Regional Ocean Modelling System). It is a free-surface, primitive equations ocean model widely used by the scientific community for a diverse range of applications <span class="citation">(<a href="#ref-Haidvogel2000" role="doc-biblioref">Haidvogel DB 2000</a>)</span>. ROMS is used by UWA researchers through the whole state: from the Kimberley region to the north extending into South Australia. Within this domain there are a number of applications focusing on specific regions and processes <span class="citation">(<a href="#ref-Middleton2012" role="doc-biblioref">Middleton JF 2012</a>)</span>.</p>
+<p>The ROMS regional model extends from the Kimberley to Bass Strait, and has a few sub domains (ex;north-west, central-west and south-west) with 1-2 km horizontal resolution and 30 sigma layers in the vertical water column <span class="citation">(<a href="#ref-Middleton2012" role="doc-biblioref">Middleton JF 2012</a>)</span>. As described in Middleton et al (2012), the model was forced with daily atmospheric (wind and air pressure) and air sea fluxes (heat and freshwater). The model open boundaries were specified with monthly salinity and temperature climatology. The model forcing included tides and monthly mean sea levels. The model initial and forcing data were extracted from various global and Australian oceanographic/meteorological data sources and interpolated in to surface horizontal mesh and open boundary vertical sections. Details of the numerical algorithm of ROMS have been described in <span class="citation">(<a href="#ref-Shchepetkin2005" role="doc-biblioref">McWilliams JC 2005</a>)</span>.</p>
+<p>It has a generalized vertical, terrain-following, coordinate system. In addition to that, horizontal velocity components, salinity and temperatures are computed on separate grids (Figure <a href="hydrodynamics-and-waves.html#fig:stv-grid">3.2</a>). Spatial resolution of ROMS data were post processed to linearly interpolate onto the TUFLOWFV model mesh. The locations at which ROMS data were sourced are shown in Figure <a href="hydrodynamics-and-waves.html#fig:roms-locations">3.3</a>.</p>
+<div class="figure"><span style="display:block;" id="fig:stv-grid"></span>
+<img src="images/stv_roms_grid_conversion.png" alt="A snapshot of ROMS seprate grids for salinity, temeperatire and velocty components" width="80%" />
+<p class="caption">
+Figure 3.2: A snapshot of ROMS seprate grids for salinity, temeperatire and velocty components
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:roms-locations"></span>
+<img src="images/ROMS_data_locations.jpg" alt="ROMS data sourcing locations" width="80%" />
+<p class="caption">
+Figure 3.3: ROMS data sourcing locations
+</p>
+</div>
+</div>
+<div id="barra---atmospheric-data" class="section level4 hasAnchor" number="3.1.2.2">
+<h4><span class="header-section-number">3.1.2.2</span> BARRA - Atmospheric data<a href="hydrodynamics-and-waves.html#barra---atmospheric-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Atmospheric boundary condition data including</p>
+<ul>
+<li><p>air temperature</p></li>
+<li><p>downward long-wave radiation</p></li>
+<li><p>downward short-wave radiation</p></li>
+<li><p>mean sea level pressure</p></li>
+<li><p>precipitation rate</p></li>
+<li><p>relative humidity</p></li>
+<li><p>wind magnitude and direction at 10m</p></li>
+</ul>
+<p>were sourced from <a href="http://www.bom.gov.au/research/projects/reanalysis/">BARRA</a>. BARRA is designed for providing multi-decadal (1990-2019) high spatial and temporal resolution, meteorological data from surface to lower stratosphere. BARRA-R Regional 12 km domain within the light blue dotted box, covers all of Australia, New Zealand and the maritime continent. Smaller black boxes are the 1.5km subdomains centred over some major Australian cities, Sydney, Hobart, Adelaide and Perth (Figure <a href="hydrodynamics-and-waves.html#fig:barra-domain">3.4</a>).</p>
+<p>Sourced reanalyses data and then applied to TUFLOW FV to support its simulation of water column heat dynamics. These model input fields were spatially uniform (i.e. gridded) but varied in time in order to represent both seasonal and higher-frequency variations (e.g. diurnal, weekly, etc..). The locations at which these data were sourced are shown in Figure <a href="hydrodynamics-and-waves.html#fig:barra-locations">3.5</a>.</p>
+<div class="figure"><span style="display:block;" id="fig:barra-domain"></span>
+<img src="images/Barra_domain.png" alt="BARRA domains and sub-domains (Sourced from BOM http://www.bom.gov.au/research/projects/reanalysis/)" width="80%" />
+<p class="caption">
+Figure 3.4: BARRA domains and sub-domains (Sourced from BOM <a href="http://www.bom.gov.au/research/projects/reanalysis/" class="uri">http://www.bom.gov.au/research/projects/reanalysis/</a>)
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:barra-locations"></span>
+<img src="images/barra_extentv2.png" alt="BARRA data sourcing locations" width="80%" />
+<p class="caption">
+Figure 3.5: BARRA data sourcing locations
+</p>
+</div>
+</div>
+<div id="inflow---swan-river" class="section level4 hasAnchor" number="3.1.2.3">
+<h4><span class="header-section-number">3.1.2.3</span> Inflow - Swan River<a href="hydrodynamics-and-waves.html#inflow---swan-river" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Freshwater flows draining to the Swan-Canning River estuary were also accounted for in the model. Canning river site and Narrows Bridge site were selected as tidal boundaries of the Swan River, based on data availability and the locality (Figure <a href="hydrodynamics-and-waves.html#fig:swanriver-bc">3.6</a>). Swan River boundary condition data including water level, salinity, temperature and nutrients were provided by UWA. Water level data at two tidal boundaries of the Swan river is shown in Figure <a href="hydrodynamics-and-waves.html#fig:swanriver-wl">3.7</a></p>
+<div class="figure"><span style="display:block;" id="fig:swanriver-bc"></span>
+<img src="images/SwanRiver_BC.png" alt="Tidal boundary locations (Canning River site Narrows Bridge site) in the downstream area of the Swan River" width="80%" />
+<p class="caption">
+Figure 3.6: Tidal boundary locations (Canning River site Narrows Bridge site) in the downstream area of the Swan River
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:swanriver-wl"></span>
+<img src="images/swan_river_WL.png" alt="Daily water level changes at Canning River site Narrows Bridge site from 2010-2021" width="80%" />
+<p class="caption">
+Figure 3.7: Daily water level changes at Canning River site Narrows Bridge site from 2010-2021
+</p>
+</div>
+</div>
+<div id="discharges-and-intakes" class="section level4 hasAnchor" number="3.1.2.4">
+<h4><span class="header-section-number">3.1.2.4</span> Discharges and Intakes<a href="hydrodynamics-and-waves.html#discharges-and-intakes" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Intakes and outfalls for other industries operating in Cockburn Sound were adopted in the model. These data were sourced from previous BMT projects <span class="citation">(<a href="#ref-BMT2014" role="doc-biblioref">BMT 2014</a>, <a href="#ref-BMT2017" role="doc-biblioref">2017</a>)</span> are summarised in Table <a href="hydrodynamics-and-waves.html#tab:dis-table">3.1</a>. The relevant intake and discharge locations are shown in Figure <a href="hydrodynamics-and-waves.html#fig:dis-locations">3.8</a>. A 100% DO saturation (based on temperature and salinity and <span class="citation">BMT (<a href="#ref-BMT2017" role="doc-biblioref">2017</a>)</span>) was assumed for the boundary conditions.</p>
+<table>
+<caption>
+<span id="tab:dis-table">Table 3.1: </span>Industrial discharges and intakes boundary conditions
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Boundary condition
+</th>
+<th style="text-align:left;">
+Flow rate
+(<span class="math inline">\(m^{3}\)</span>/s)
+</th>
+<th style="text-align:left;">
+Temperature
+(<span class="math inline">\(^0\)</span>C)
+</th>
+<th style="text-align:left;">
+Salinity
+</th>
+<th style="text-align:left;">
+DO
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+PSDP
+</td>
+<td style="text-align:left;">
+4.1
+</td>
+<td style="text-align:left;">
+N/A
+</td>
+<td style="text-align:left;">
+N/A
+</td>
+<td style="text-align:left;">
+N/A
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SDOOL
+</td>
+<td style="text-align:left;">
+0.28
+</td>
+<td style="text-align:left;">
+N/A
+</td>
+<td style="text-align:left;">
+N/A
+</td>
+<td style="text-align:left;">
+N/A
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Kwinana Power Station Stage A and B
+</td>
+<td style="text-align:left;">
+9.2
+</td>
+<td style="text-align:left;">
+Ambient + 9
+</td>
+<td style="text-align:left;">
+Ambient
+</td>
+<td style="text-align:left;">
+100% saturation at Discharge
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cockburn Power Station and Kwinana Power Station Stage C
+</td>
+<td style="text-align:left;">
+9.82
+</td>
+<td style="text-align:left;">
+Ambient + 9
+</td>
+<td style="text-align:left;">
+Ambient
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BP Refinery
+</td>
+<td style="text-align:left;">
+5.4
+</td>
+<td style="text-align:left;">
+Ambient + 13.83
+</td>
+<td style="text-align:left;">
+Ambient - 0.38
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Tiwest
+</td>
+<td style="text-align:left;">
+0.125 (No Intake)
+</td>
+<td style="text-align:left;">
+Ambient +3
+</td>
+<td style="text-align:left;">
+24
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+</tbody>
+</table>
+<div class="figure"><span style="display:block;" id="fig:dis-locations"></span>
+<img src="images/A11348_000_001_03locA4_20221118.jpg" alt="Key discharge and intake locations in the Cockburn Sound" width="80%" />
+<p class="caption">
+Figure 3.8: Key discharge and intake locations in the Cockburn Sound
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="swan-wave-model" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> SWAN Wave Model<a href="hydrodynamics-and-waves.html#swan-wave-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Wave modelling was included in the assessment to capture sediment resuspension and dispersion from wave action in shallow areas, likely to be significant in determining sediment plume behaviour. The wave modelling component of these assessments has been undertaken using the third generation wave model Simulating WAves Nearshore (SWAN). It is an Eulerian formulation of the discrete action balance equation <span class="citation">(<a href="#ref-Booji1996" role="doc-biblioref">Booji N 1996</a>)</span>. Since it preserves the action density in ambient currents, it was selected as a tool to perform the required simulations of wave-current interaction. SWAN simulates wave/swell propagation in two-dimensions, including shoaling and refraction due to spatial variations in bathymetry and currents. This is a global industry standard modelling package that has been applied with reliable results to many investigations worldwide.</p>
+<p>For sediment re-suspension and dispersion modelling the SWAN wave model was coupled with the 3D TUFLOW FV hydrodynamic and advection-dispersion models. This required the wave simulations to be completed separately, with the model output stored at hourly intervals on regular grids. During the subsequent sediment re-suspension and dispersion simulations, the wave conditions were linearly interpolated spatially from the grids to the TUFLOW FV mesh.</p>
+<p>Previously used calibrated SWAN model <span class="citation">(<a href="#ref-BMT2022" role="doc-biblioref">BMT 2022</a>)</span> was recommissioned for this work.</p>
+<div id="model-domain" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Model Domain<a href="hydrodynamics-and-waves.html#model-domain" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A two-grid nesting approach was adopted for the study. The grid set-up was as follows:</p>
+<ul>
+<li><p>A regional-scale model, A-grid, (Figure <a href="hydrodynamics-and-waves.html#fig:wave-domian">3.9</a>) was set up in order to introduce the offshore wave forcing conditions to the study area. A-grid covers an area of approximately 76.5 km (east-west) by 112.6 km (north-south). To ensure that the wave transformation over the nearshore shelf is properly replicated by the wave model the domain extended offshore to 500 m water depth. The size of the regional scale domain enabled the input of spatially and temporally variable offshore wave conditions across the boundaries. The regional scale model was forced by several offshore wave data points obtained from global wave models. This approach is considered significantly more robust than the conventional method using one point of measured (or modelled) data as the offshore boundary. Adopting this approach, the modelling framework captured the offshore wave variability across the boundaries resulting in more accurate and reliable nearshore wave predictions.</p></li>
+<li><p>An intermediate scale model, B-grid, (Figure <a href="hydrodynamics-and-waves.html#fig:wave-domian">3.9</a>) was set up to refine the resolution of the solutions from A-grid; B-grid extends approximately 43 km offshore and 75 km alongshore.</p></li>
+</ul>
+<div class="figure"><span style="display:block;" id="fig:wave-domian"></span>
+<img src="images/swan_wave_model_domain.png" alt="Key discharge and intake locations in the Cockburn Sound" width="80%" />
+<p class="caption">
+Figure 3.9: Key discharge and intake locations in the Cockburn Sound
+</p>
+</div>
+</div>
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-BMT2014" class="csl-entry">
+BMT. 2014. <span>“<a href="">Sepia Depression Ocean Outlet Monitoring and Management Plan</a>.”</span> 821_001/1_Rev5. Technical Report Prepared for Water Corporation,BMT Australia Ltd.
+</div>
+<div id="ref-BMT2017" class="csl-entry">
+———. 2017. <span>“<a href="">Perth Desalination Plant Discharge Modelling: Model Validation</a>.”</span> Reference: r.B22253.002.01.ModelValidation.docx. Technical Report Prepared for Water Corporation,BMT Australia Ltd.
+</div>
+<div id="ref-BMT2022" class="csl-entry">
+———. 2022. <span>“<a href="">Wave Modelling Study;breakwater Needs Assessment for a New Land Backed Port - Westport Project</a>.”</span> Technical Report Prepared for the Department of Transport,WA,BMT Australia Ltd.
+</div>
+<div id="ref-Booji1996" class="csl-entry">
+Booji N, &amp; Ris RC, Holthuijsen LH. 1996. <span>“The SWAN Wave Model for Shallow Water.”</span> In <em>N Proceedings of the 25th International Conference on Coastal Engineering</em>, edited by ACOMO 2012 Steering Committee, 668–76. Orlando, FL: ASCE.
+</div>
+<div id="ref-Haidvogel2000" class="csl-entry">
+Haidvogel DB, Hedstrom K, Arango HG. 2000. <span>“Model Evaluation Experiments in the North Atlantic Basin: Simulations in Nonlinear Terrain-Following Coordinates.”</span> <em>Dynamic Atmospheric Oceans</em> 32 (3-4): 239–81. <a href="https://doi.org/10.1016/S0377-0265(00)00049-X">https://doi.org/10.1016/S0377-0265(00)00049-X</a>.
+</div>
+<div id="ref-Shchepetkin2005" class="csl-entry">
+McWilliams JC, Shchepetkin AF &amp;. 2005. <span>“The Regional Oceanic Modeling System (ROMS): A Split-Explicit, Free-Surface, Topography-Following-Coordinate Oceanic Model.”</span> <em>Ocean Modelling</em> 9 (4): 347–404. <a href="https://doi.org/10.1016/j.ocemod.2004.08.002">https://doi.org/10.1016/j.ocemod.2004.08.002</a>.
+</div>
+<div id="ref-Middleton2012" class="csl-entry">
+Middleton JF, Pattiaratchi C, Roughan M. 2012. <span>“ROMS Modelling in Australia: Current Status, Plans and Aspirations.”</span> In <em>The Australian Coastal and Oceans Modelling and Observations Workshop (ACOMO 2012)</em>, edited by ACOMO 2012 Steering Committee. Shine Dome, Canberra: Australian Academy of Sciences.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="integrated-modelling-approach.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="model-calibration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-HydroWave_Model.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
