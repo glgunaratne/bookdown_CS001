@@ -13,15 +13,23 @@ Waters immediately north of the Sound (i.e. between Carnac Island and Owen Ancho
 knitr::include_graphics("images/CS_locality.png")
 ```
 
-As described by Lourey et al (The report listed the following features of Cockburn Sound identified as driving the need for a coordinated response to environmental management 
+As described by Lourey et al @Lourey2021 the following features of Cockburn Sound identified as driving the need for a coordinated response to environmental management.
 
+* A semi-enclosed waterbody, relatively protected from wind and wave action leading to to poor flushing conditions.
 
-•	One of the most intensely used marine areas in Western Australia.
-•	Used by commercial and recreational fisheries, sensitive breeding ground for fish and other marine animals.
-•	An established industrial hub with multiple discharges, ports and a desalination plant
-•	Location of a number of proposed major developments (Perth Seawater Desalination Plant II and Westport)
-•	Adjacent the rapidly developing urban centre of Rockingham 
-•	Subject to a number of pressures and stressors and has a history of environmental degradation (particularly eutrophication)
-•	An area of cultural significance to the Beeliar Nyungar known as Derbal Nara
+*	One of the most intensely used marine areas in Western Australia.
+
+*	Used by commercial and recreational fisheries, sensitive breeding ground for fish and other marine animals.
+
+*	An established industrial hub with multiple discharges, ports and a desalination plant
+
+*	Location of a number of proposed major developments (Perth Seawater Desalination Plant II and Westport)
+
+*	Adjacent the rapidly developing urban centre of Rockingham 
+
+*	Subject to a number of pressures and stressors and has a history of environmental degradation (particularly eutrophication)
+
+*	An area of cultural significance to the Beeliar Nyungar known as Derbal Nara
+
 
 ## Data Collection
