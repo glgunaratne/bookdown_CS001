@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Sediment Transport Model | Development of a water quality response model for Cockburn Sound</title>
+  <title>Chapter 4 Wave Modelling | Development of a water quality response model for Cockburn Sound</title>
   <meta name="description" content="A technical Report" />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Sediment Transport Model | Development of a water quality response model for Cockburn Sound" />
+  <meta property="og:title" content="Chapter 4 Wave Modelling | Development of a water quality response model for Cockburn Sound" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A technical Report" />
   <meta name="github-repo" content="glgunaratne/bookdown_CS001" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Sediment Transport Model | Development of a water quality response model for Cockburn Sound" />
+  <meta name="twitter:title" content="Chapter 4 Wave Modelling | Development of a water quality response model for Cockburn Sound" />
   
   <meta name="twitter:description" content="A technical Report" />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="wave-modelling.html"/>
-
+<link rel="prev" href="hydrodynamic-modelling.html"/>
+<link rel="next" href="model-simulation.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -106,7 +106,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="3" data-path="hydrodynamic-modelling.html"><a href="hydrodynamic-modelling.html"><i class="fa fa-check"></i><b>3</b> Hydrodynamic Modelling</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="hydrodynamic-modelling.html"><a href="hydrodynamic-modelling.html#tuflofv-3d-hydrodynamic-model"><i class="fa fa-check"></i><b>3.1</b> TUFLOFV 3D Hydrodynamic Model</a>
+<li class="chapter" data-level="3.1" data-path="hydrodynamic-modelling.html"><a href="hydrodynamic-modelling.html#tuflowfv-3d-hydrodynamic-model"><i class="fa fa-check"></i><b>3.1</b> TUFLOWFV 3D Hydrodynamic Model</a>
 <ul>
 <li class="chapter" data-level="3.1.1" data-path="hydrodynamic-modelling.html"><a href="hydrodynamic-modelling.html#model-domain-mesh-and-bathymetry"><i class="fa fa-check"></i><b>3.1.1</b> Model domain, mesh and bathymetry</a></li>
 <li class="chapter" data-level="3.1.2" data-path="hydrodynamic-modelling.html"><a href="hydrodynamic-modelling.html#boundary-conditions"><i class="fa fa-check"></i><b>3.1.2</b> Boundary conditions</a></li>
@@ -126,20 +126,7 @@ div.csl-indent {
 <li class="chapter" data-level="4.1.1" data-path="wave-modelling.html"><a href="wave-modelling.html#model-domain"><i class="fa fa-check"></i><b>4.1.1</b> Model Domain</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html"><i class="fa fa-check"></i><b>5</b> Sediment Transport Model</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#data-sourcing"><i class="fa fa-check"></i><b>5.1</b> Data sourcing</a>
-<ul>
-<li class="chapter" data-level="5.1.1" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#sediment-fractions"><i class="fa fa-check"></i><b>5.1.1</b> Sediment fractions</a></li>
-<li class="chapter" data-level="5.1.2" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#partcle-size-distribution"><i class="fa fa-check"></i><b>5.1.2</b> Partcle size distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="5.2" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#tuflowfv-sediment-transport-module"><i class="fa fa-check"></i><b>5.2</b> TUFLOWFV Sediment transport Module</a></li>
-<li class="chapter" data-level="5.3" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#uncalibrated-model-outputs"><i class="fa fa-check"></i><b>5.3</b> Uncalibrated model outputs</a>
-<ul>
-<li class="chapter" data-level="5.3.1" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#tss"><i class="fa fa-check"></i><b>5.3.1</b> TSS</a></li>
-<li class="chapter" data-level="5.3.2" data-path="sediment-transport-model.html"><a href="sediment-transport-model.html#suspended-solids"><i class="fa fa-check"></i><b>5.3.2</b> Suspended solids</a></li>
-</ul></li>
-</ul></li>
+<li class="chapter" data-level="5" data-path="model-simulation.html"><a href="model-simulation.html"><i class="fa fa-check"></i><b>5</b> Model simulation</a></li>
 <li class="divider"></li>
 <li><a href="https://glgunaratne.github.io/bookdown_CS001" target="blank">Published with bookdown</a></li>
 
@@ -160,75 +147,107 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="sediment-transport-model" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">Chapter 5</span> Sediment Transport Model<a href="sediment-transport-model.html#sediment-transport-model" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="data-sourcing" class="section level2 hasAnchor" number="5.1">
-<h2><span class="header-section-number">5.1</span> Data sourcing<a href="sediment-transport-model.html#data-sourcing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="sediment-fractions" class="section level3 hasAnchor" number="5.1.1">
-<h3><span class="header-section-number">5.1.1</span> Sediment fractions<a href="sediment-transport-model.html#sediment-fractions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="wave-modelling" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Wave Modelling<a href="wave-modelling.html#wave-modelling" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="swan-wave-model" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> SWAN Wave Model<a href="wave-modelling.html#swan-wave-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Wave modelling was included in the assessment to capture sediment resuspension and dispersion from wave action in shallow areas, likely to be significant in determining sediment plume behaviour. The wave modelling component of these assessments has been undertaken using the third generation wave model Simulating WAves Nearshore (SWAN). It is an Eulerian formulation of the discrete action balance equation <span class="citation">(<a href="#ref-Booji1996" role="doc-biblioref">Booji N 1996</a>)</span>. Since it preserves the action density in ambient currents, it was selected as a tool to perform the required simulations of wave-current interaction. SWAN simulates wave/swell propagation in two-dimensions, including shoaling and refraction due to spatial variations in bathymetry and currents. This is a global industry standard modelling package that has been applied with reliable results to many investigations worldwide.</p>
+<p>For sediment re-suspension and dispersion modelling the SWAN wave model was coupled with the 3D TUFLOW FV hydrodynamic and advection-dispersion models. This required the wave simulations to be completed separately, with the model output stored at hourly intervals on regular grids. During the subsequent sediment re-suspension and dispersion simulations, the wave conditions were linearly interpolated spatially from the grids to the TUFLOW FV mesh.</p>
+<p>Previously used calibrated SWAN model <span class="citation">(<a href="#ref-BMT2022" role="doc-biblioref">BMT 2022</a>)</span> was recommissioned for this work.</p>
+<div id="model-domain" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Model Domain<a href="wave-modelling.html#model-domain" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A two-grid nesting approach was adopted for the study. The grid set-up was as follows:</p>
+<ul>
+<li><p>A regional-scale model, A-grid, (Figure <a href="wave-modelling.html#fig:wave-domian">4.1</a>) was set up in order to introduce the offshore wave forcing conditions to the study area. A-grid covers an area of approximately 76.5 km (east-west) by 112.6 km (north-south). To ensure that the wave transformation over the nearshore shelf is properly replicated by the wave model the domain extended offshore to 500 m water depth. The size of the regional scale domain enabled the input of spatially and temporally variable offshore wave conditions across the boundaries. The regional scale model was forced by several offshore wave data points obtained from global wave models. This approach is considered significantly more robust than the conventional method using one point of measured (or modelled) data as the offshore boundary. Adopting this approach, the modelling framework captured the offshore wave variability across the boundaries resulting in more accurate and reliable nearshore wave predictions.</p></li>
+<li><p>An intermediate scale model, B-grid, (Figure <a href="wave-modelling.html#fig:wave-domian">4.1</a>) was set up to refine the resolution of the solutions from A-grid; B-grid extends approximately 43 km offshore and 75 km alongshore.</p></li>
+</ul>
+<p>The domain size and model resolutions are outlined in Table <a href="wave-modelling.html#tab:wave-table">4.1</a>.</p>
+<div class="figure"><span style="display:block;" id="fig:wave-domian"></span>
+<img src="images/swan_wave_model_domain.png" alt="Key discharge and intake locations in the Cockburn Sound" width="80%" />
+<p class="caption">
+Figure 4.1: Key discharge and intake locations in the Cockburn Sound
+</p>
 </div>
-<div id="partcle-size-distribution" class="section level3 hasAnchor" number="5.1.2">
-<h3><span class="header-section-number">5.1.2</span> Partcle size distribution<a href="sediment-transport-model.html#partcle-size-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-</div>
-</div>
-<div id="tuflowfv-sediment-transport-module" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> TUFLOWFV Sediment transport Module<a href="sediment-transport-model.html#tuflowfv-sediment-transport-module" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-</div>
-<div id="uncalibrated-model-outputs" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> Uncalibrated model outputs<a href="sediment-transport-model.html#uncalibrated-model-outputs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="tss" class="section level3 hasAnchor" number="5.3.1">
-<h3><span class="header-section-number">5.3.1</span> TSS<a href="sediment-transport-model.html#tss" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-</div>
-<div id="suspended-solids" class="section level3 hasAnchor" number="5.3.2">
-<h3><span class="header-section-number">5.3.2</span> Suspended solids<a href="sediment-transport-model.html#suspended-solids" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<caption>
+<span id="tab:wave-table">Table 4.1: </span>SWAN wave model domain characteristics
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Model description
+</th>
+<th style="text-align:left;">
+Grid name
+</th>
+<th style="text-align:left;">
+Model X length
+</th>
+<th style="text-align:left;">
+Model Y length
+</th>
+<th style="text-align:left;">
+Model resolution
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Regional scale
+</td>
+<td style="text-align:left;">
+A-grid
+</td>
+<td style="text-align:left;">
+76.5 km
+</td>
+<td style="text-align:left;">
+112.6 km
+</td>
+<td style="text-align:left;">
+421 m x 701 m
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Intermediate
+</td>
+<td style="text-align:left;">
+B-grid
+</td>
+<td style="text-align:left;">
+43 km
+</td>
+<td style="text-align:left;">
+75 km
+</td>
+<td style="text-align:left;">
+211 m x 311 m
+</td>
+</tr>
+</tbody>
+</table>
 
+</div>
+</div>
+</div>
+<h3>References</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div class="csl-entry">
-BMT. 2014. <span>“<a href="">Sepia Depression Ocean Outlet Monitoring and Management Plan</a>.”</span> 821_001/1_Rev5. Technical Report Prepared for Water Corporation,BMT Australia Ltd.
-</div>
-<div class="csl-entry">
-———. 2017. <span>“<a href="">Perth Desalination Plant Discharge Modelling: Model Validation</a>.”</span> Reference: r.B22253.002.01.ModelValidation.docx. Technical Report Prepared for Water Corporation,BMT Australia Ltd.
-</div>
-<div class="csl-entry">
+<div id="ref-BMT2022" class="csl-entry">
 ———. 2022. <span>“<a href="">Wave Modelling Study;breakwater Needs Assessment for a New Land Backed Port - Westport Project</a>.”</span> Technical Report Prepared for the Department of Transport,WA,BMT Australia Ltd.
 </div>
-<div class="csl-entry">
+<div id="ref-Booji1996" class="csl-entry">
 Booji N, &amp; Ris RC, Holthuijsen LH. 1996. <span>“The SWAN Wave Model for Shallow Water.”</span> In <em>N Proceedings of the 25th International Conference on Coastal Engineering</em>, edited by ACOMO 2012 Steering Committee, 668–76. Orlando, FL: ASCE.
 </div>
-<div class="csl-entry">
-CWR. 2007. <span>“<a href="">Hydrodynamic Modelling of the Impact of the Perth Seawater Desalination Plant Discharge on Cockburn Sound</a>.”</span> Technical Report. Centre for Water Research.
 </div>
-<div class="csl-entry">
-Haidvogel DB, Hedstrom K, Arango HG. 2000. <span>“Model Evaluation Experiments in the North Atlantic Basin: Simulations in Nonlinear Terrain-Following Coordinates.”</span> <em>Dynamic Atmospheric Oceans</em> 32 (3-4): 239–81. <a href="https://doi.org/10.1016/S0377-0265(00)00049-X">https://doi.org/10.1016/S0377-0265(00)00049-X</a>.
-</div>
-<div class="csl-entry">
-McWilliams JC, Shchepetkin AF &amp;. 2005. <span>“The Regional Oceanic Modeling System (ROMS): A Split-Explicit, Free-Surface, Topography-Following-Coordinate Oceanic Model.”</span> <em>Ocean Modelling</em> 9 (4): 347–404. <a href="https://doi.org/10.1016/j.ocemod.2004.08.002">https://doi.org/10.1016/j.ocemod.2004.08.002</a>.
-</div>
-<div class="csl-entry">
-Middleton JF, Pattiaratchi C, Roughan M. 2012. <span>“ROMS Modelling in Australia: Current Status, Plans and Aspirations.”</span> In <em>The Australian Coastal and Oceans Modelling and Observations Workshop (ACOMO 2012)</em>, edited by ACOMO 2012 Steering Committee. Shine Dome, Canberra: Australian Academy of Sciences.
-</div>
-<div class="csl-entry">
-UWA. 2022. <span>“<a href="">Western Australian Marine Science Institution (WAMSI) Collaborative Project Agreement, WAMSI Westport Marine Science Program, Project 1.2 Pathways to Productivity Development of a Water Quality Response Model for Cockburn Sound</a>.”</span> Head Agreement, The University of Western Australia as the Centre Agent for WAMSI.
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-
-
-
-
-
-
             </section>
 
           </div>
         </div>
       </div>
-<a href="wave-modelling.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="hydrodynamic-modelling.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="model-simulation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -259,7 +278,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/04-Model_simulation.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-WaveModel.Rmd",
 "text": "Edit"
 },
 "history": {

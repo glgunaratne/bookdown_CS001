@@ -1,20 +1,9 @@
-# Sediment Transport Model
+# Model simulation
 
-## Data sourcing
-
-### Sediment fractions
-
-### Partcle size distribution
-
-
-## TUFLOWFV Sediment transport Module 
-
-## Uncalibrated model outputs
-
-### TSS
-
-### Suspended solids
-
-
-
+Several simulations were undertaken to demonstrate that the models described in Chapetsr 2 and 3 3 and 4 are fit for purpose to assess the existing and proposed PSDP discharges, including comparisons against:
+• FPA water velocity data at the Northern Basin and Spoil Ground stations (Figure 2-4). The supporting simulations were correspondingly undertaken for the periods of May to July 2006 and February to March of 2007, and so therefore did not include the PSDP discharge.
+• Water Corporation water quality data (temperature, salinity and DO) at the North Buoy, Central Buoy and South Buoy stations (Figure 2-4). Both continuous data (termed RTMS) and profile data were used for comparisons. Supporting simulations were undertaken for the periods of January to March of 2008 and August to September 2008, and so therefore included the PSDP discharge.
+• Historically estimated Sound flushing times.
+• Evaporation rates.
+All model simulations were warmed up for a period of at least 20 days prior to data comparisons. Initial conditions for temperature and salinity were provided by HYCOM + NCODA data, and DO concentrations were assumed to be 95% of saturation based on the temperature and salinity fields. Model outputs were extracted at every 15 minutes.
 

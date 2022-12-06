@@ -34,18 +34,6 @@ knitr::include_graphics("images/A11348_000_001_03scopeA4_20221118.jpg")
 BMT was commissioned by the [Aquatic Ecodynamic](https://aed.see.uwa.edu.au/research/models/aed/) Research Group of the [University Of western Australia](https://www.uwa.edu.au/) to deliver the first base platform of a coupled hydrodynamic - water quality model for Cockburn Sound and surrounding waters – termed the Cycle I model in the head agreement [@UWA2022]. The model developed under this agreement will be available for use by researchers and industry for scenario assessment, and further research and development.**
 
 
-## Study site description
-
-Cockburn Sound is a semi-enclosed embayment bounded by the mainland to the east and south, and Garden Island to the west. The main opening to the Sound is to the north between Woodman Point (east) and the northeast tip of Garden Island. A causeway linking Rockingham to the southern end of Garden Island completes the western boundary of the Sound. This causeway was completed in 1974 and contains two openings 300 m and 600 m wide.
-
-Cockburn Sound extends approximately 15 km from north to south and up to 9 km from east to west. The width reduces in the south, being approximately up to 5 km between the Causeway and East Rockingham. The Sound can be split into two main regions, a deep central basin with depths between 17 and 22 m and a marginal shore area with depths of up to 12.0 m particularly prominent on the eastern boundary (Figure \@ref(fig:CS-locality)). The deep basin occupies approximately 60% of the Cockburn Sound area (total of 110 km2).
-Waters immediately north of the Sound (i.e. between Carnac Island and Owen Anchorage) sit on a sill that is relatively shallow with depths ranging between 2.0 and 5.0 m. Success and Parmelia Channel with depths of approximately 15.0 m deep are routinely dredged to allow shipping traffic in and out of Cockburn Sound. A range of shipping channels inside the Sound provides access to the local industry berths, including Woodman Channel, Jervoise Channel, Median Channel, Calista Channel and Stirling Channel. In particular, Calista and Stirling channels are relevant for the movement of the PDSP brine effluent in Cockburn Sound [@CWR2007].
-
-
-```{r CS-locality, fig.cap='Key channels and outfalls in the Cockburn Sound', out.width='80%',echo=FALSE,}
-# include images created outside R
-knitr::include_graphics("images/CS_locality.png")
-```
 
 ## Services Description  
 

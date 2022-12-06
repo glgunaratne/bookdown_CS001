@@ -1,0 +1,27 @@
+# Study Site and Data Collection
+
+## Study site description
+
+Cockburn Sound is a semi-enclosed embayment bounded by the mainland to the east and south, and Garden Island to the west. The main opening to the Sound is to the north between Woodman Point (east) and the northeast tip of Garden Island. A causeway linking Rockingham to the southern end of Garden Island completes the western boundary of the Sound. This causeway was completed in 1974 and contains two openings 300 m and 600 m wide.
+
+Cockburn Sound extends approximately 15 km from north to south and up to 9 km from east to west. The width reduces in the south, being approximately up to 5 km between the Causeway and East Rockingham. The Sound can be split into two main regions, a deep central basin with depths between 17 and 22 m and a marginal shore area with depths of up to 12.0 m particularly prominent on the eastern boundary (Figure \@ref(fig:CS-locality)). The deep basin occupies approximately 60% of the Cockburn Sound area (total of 110 km2).
+Waters immediately north of the Sound (i.e. between Carnac Island and Owen Anchorage) sit on a sill that is relatively shallow with depths ranging between 2.0 and 5.0 m. Success and Parmelia Channel with depths of approximately 15.0 m deep are routinely dredged to allow shipping traffic in and out of Cockburn Sound. A range of shipping channels inside the Sound provides access to the local industry berths, including Woodman Channel, Jervoise Channel, Median Channel, Calista Channel and Stirling Channel. In particular, Calista and Stirling channels are relevant for the movement of the PDSP brine effluent in Cockburn Sound [@CWR2007].
+
+
+```{r CS-locality, fig.cap='Key channels and outfalls in the Cockburn Sound', out.width='80%',echo=FALSE,}
+# include images created outside R
+knitr::include_graphics("images/CS_locality.png")
+```
+
+As described by Lourey et al (The report listed the following features of Cockburn Sound identified as driving the need for a coordinated response to environmental management 
+
+
+•	One of the most intensely used marine areas in Western Australia.
+•	Used by commercial and recreational fisheries, sensitive breeding ground for fish and other marine animals.
+•	An established industrial hub with multiple discharges, ports and a desalination plant
+•	Location of a number of proposed major developments (Perth Seawater Desalination Plant II and Westport)
+•	Adjacent the rapidly developing urban centre of Rockingham 
+•	Subject to a number of pressures and stressors and has a history of environmental degradation (particularly eutrophication)
+•	An area of cultural significance to the Beeliar Nyungar known as Derbal Nara
+
+## Data Collection
