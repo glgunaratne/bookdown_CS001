@@ -146,17 +146,22 @@ knitr::include_graphics("images/swan_river_WL.png")
 
 Intakes and outfalls for other industries operating in Cockburn Sound were adopted in the model. These data were sourced from previous BMT projects [@BMT2014;@BMT2017] are summarised in Table \@ref(tab:dis-table). The relevant intake and discharge locations are shown in Figure \@ref(fig:dis-locations). A 100% DO saturation (based on temperature and salinity and @BMT2017) was assumed for the boundary conditions.
 
-```{r dis-table,echo=FALSE,}
+```{r dis-data,echo=FALSE,}
 dis<-read.csv(file="table/cs_discharges.csv")
 #head(dis)
-# library(kableExtra)
+```
+
+
+
+```{r dis-table,echo=FALSE,}
+library(kableExtra)
+
 # dis %>%
 #   kbl(col.names = c("Boundary condition","Flow rate\n($m^{3}$/s","Temperature\n($^0$C)","Salinity","DO"),
 #       booktabs = TRUE, escape = FALSE) %>%
 #   #kable_styling() %>%
 #   kable_paper("hover", full_width = F)%>%
 #   add_footnote("Note:Discharge flow rates the same intake flow rates unless noted. Temperature, salinity and DO not applicable to intakes.", notation="none")
-
 knitr::kable(dis, booktabs = TRUE, caption = 'Industrial discharges and intakes boundary conditions', 
               col.names = c("Boundary condition","Flow rate\n($m^{3}$/s)","Temperature\n($^0$C)","Salinity","DO"))
 ```
@@ -164,7 +169,9 @@ knitr::kable(dis, booktabs = TRUE, caption = 'Industrial discharges and intakes 
 
 ```{r dis-locations, fig.cap='Key discharge and intake locations in the Cockburn Sound', out.width='80%',echo=FALSE,}
 # include images created outside R
+
 knitr::include_graphics("images/A11348_000_001_03locA4_20221118.jpg")
+
 ```
 
 ## Model Parameterisation

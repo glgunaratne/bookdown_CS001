@@ -1,5 +1,7 @@
 fig:CS-studysite
 fig:CS-locality
+tab:obs-table
+fig:CS-met
 fig:int-model
 fig:model-mesh
 fig:stv-grid
@@ -17,9 +19,9 @@ about
 project-description
 services-description
 deliverables
-study-site-and-data-collection
+site-characterisation
 study-site-description
-data-collection
+data-avaialability
 integrated-modelling-approach
 key-model-components
 hydrodynamic-modelling
