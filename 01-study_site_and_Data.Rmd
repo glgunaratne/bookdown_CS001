@@ -10,7 +10,7 @@ Waters immediately north of the Sound (i.e. between Carnac Island and Owen Ancho
 
 ```{r CS-locality, fig.cap='Key channels and outfalls in the Cockburn Sound', out.width='80%',echo=FALSE,}
 # include images created outside R
-knitr::include_graphics("images/CS_locality.png")
+knitr::include_graphics("images/A11348_000_001_03placesA4_20221207.jpg")
 ```
 
 @Lourey2021 listed the following features of Cockburn Sound identified as driving the need for a coordinated response to environmental management.
@@ -34,8 +34,11 @@ knitr::include_graphics("images/CS_locality.png")
 
 ## Data Avaialability
 
-High quality data were collated from previously completed studies [@BMT2017; BMT2022; @Lourey2021]in the scope area sources to ensure maximum use of existing and historical data complemented by up-to-date project specific data
-The following seven representative climatological simulation periods were simulated before calibration and validation of the hydrodynamic and dissolved oxygen model against historical observed data [@Lourey2021;@BMT2017]:
+High quality data were collated from previously completed studies [@BMT2017; @BMT2022; @Lourey2021] in the scope area sources to ensure maximum use of existing and historical data complemented by up-to-date project specific data.
+
+### Previous model calibration and validation runs
+
+The following seven representative climatological simulation periods were simulated previously for calibration and validation of the hydrodynamic and dissolved oxygen model against historical observed data [@Lourey2021;@BMT2017]:
 
 * Winter to Spring 2006
 
@@ -53,9 +56,10 @@ The following seven representative climatological simulation periods were simula
 
 These climatological simulation periods were selected to represent a range of typical seasons as well as hydrodynamic responses to extreme weather conditions.
 
+### 2013 metocean data
 
 Based on data availability, locality and relativeness, Year 2013 was selected for the first instance for the re-calibration.
-Re-calibration was required due to the usage of different input data sources (i.e. ROMS and BARAA data) compared to to previous studies.See more details on section 4.3 under Boudary conditions. 
+Re-calibration was required due to the usage of different input data sources (i.e. ROMS and BARAA data) compared to to previous studies. See more details on section 4.3 under Boundary conditions. 
 
 The locations of continuous, high frequency Metocean data (i.e. tides, currents, waves, salinity and temperature) used to support the calibration of the Cockburn Sound hydrodynamic model are listed in Table \@ref(tab:obs-table) and the sites are shown in Figure \@ref(fig:CS-met).
 
@@ -81,5 +85,4 @@ knitr::kable(obs, booktabs = TRUE, caption = 'Metocean data used for model re-ca
 knitr::include_graphics("images/A11348_000_001_03buoyA4_20221118.jpg")
 ```
 
-In combination with ocular inspection, model predictive skill was also tested statistically with calculations of the Index of Agreement (IOA), Mean Absolute Error (MAE), and Root Mean Square Error (RMSE).
 

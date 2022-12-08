@@ -1,9 +1,48 @@
 # Model simulation
 
-Several simulations were undertaken to demonstrate that the models described in Chapetsr 2 and 3 3 and 4 are fit for purpose to assess the existing and proposed PSDP discharges, including comparisons against:
-• FPA water velocity data at the Northern Basin and Spoil Ground stations (Figure 2-4). The supporting simulations were correspondingly undertaken for the periods of May to July 2006 and February to March of 2007, and so therefore did not include the PSDP discharge.
-• Water Corporation water quality data (temperature, salinity and DO) at the North Buoy, Central Buoy and South Buoy stations (Figure 2-4). Both continuous data (termed RTMS) and profile data were used for comparisons. Supporting simulations were undertaken for the periods of January to March of 2008 and August to September 2008, and so therefore included the PSDP discharge.
-• Historically estimated Sound flushing times.
-• Evaporation rates.
-All model simulations were warmed up for a period of at least 20 days prior to data comparisons. Initial conditions for temperature and salinity were provided by HYCOM + NCODA data, and DO concentrations were assumed to be 95% of saturation based on the temperature and salinity fields. Model outputs were extracted at every 15 minutes.
+
+## Simulation periods and warmups
+
+A quiescent start condition was adopted for velocity and water levels. Initialisation of salinity and temperature data was based on spatially variable ROMS data as described earlier. The simulations were then warmed-up for at least 21 days prior to all modelling tasks and result analysis, to develop the internal salinity and temperature distributions contributing to density stratification.
+
+
+For each of the model scenarios, the models were run for 52 days excluding the warmup periods and Model outputs were extracted at every 15 minutes. Calibration period was selected based on measured data availability and the hydrodynamics were simulated for the one whole year; 
+
+* Calibration period: 01/01/2013 to 01/03/2013
+
+* Simulation period: 01/01/2013 to 31/12/2013
+
+
+Modeled data were compared against observed data (Figure \@ref(fig:CS-met))including;
+
+* Velocity data at S01 and S02 sites from JPPL 
+
+* Temperature and salinity data at Stirling and Parmelia from Fremantle Ports Authority
+
+* Temperature and salinity data at the Central Buoy and South Buoy stations from Water Corporation
+
+
+## Water level
+
+
+
+
+
+## Velocity comparison
+
+Comparisons between simulated velocities and ADCP measurements in the calibration and validation periods at S01 and S02 were carried out. Measured data at different depths were compared with modeled data for the calibration and validation periods.
+
+
+Discuss 
+
+Agreements
+
+The model predictive skill was also tested statistically with calculations of the Index of Agreement (IOA), Mean Absolute Error (MAE), and Root Mean Square Error (RMSE) as defined XXXX At project inception, the following calibration targets were agreed as indicators of satisfactory model validation (Table 5-2):
+
+
+## Temperature
+
+
+## Salinity
+
 

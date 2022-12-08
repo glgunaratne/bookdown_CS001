@@ -102,7 +102,11 @@ div.csl-indent {
 <li class="chapter" data-level="2" data-path="site-characterisation.html"><a href="site-characterisation.html"><i class="fa fa-check"></i><b>2</b> Site Characterisation</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="site-characterisation.html"><a href="site-characterisation.html#study-site-description"><i class="fa fa-check"></i><b>2.1</b> Study site description</a></li>
-<li class="chapter" data-level="2.2" data-path="site-characterisation.html"><a href="site-characterisation.html#data-avaialability"><i class="fa fa-check"></i><b>2.2</b> Data Avaialability</a></li>
+<li class="chapter" data-level="2.2" data-path="site-characterisation.html"><a href="site-characterisation.html#data-avaialability"><i class="fa fa-check"></i><b>2.2</b> Data Avaialability</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="site-characterisation.html"><a href="site-characterisation.html#previous-model-calibration-and-validation-runs"><i class="fa fa-check"></i><b>2.2.1</b> Previous model calibration and validation runs</a></li>
+<li class="chapter" data-level="2.2.2" data-path="site-characterisation.html"><a href="site-characterisation.html#metocean-data"><i class="fa fa-check"></i><b>2.2.2</b> 2013 metocean data</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="integrated-modelling-approach.html"><a href="integrated-modelling-approach.html"><i class="fa fa-check"></i><b>3</b> Integrated Modelling Approach</a>
 <ul>
@@ -128,7 +132,14 @@ div.csl-indent {
 <li class="chapter" data-level="4.4.4" data-path="hydrodynamic-modelling.html"><a href="hydrodynamic-modelling.html#turbulence-closure-scheme"><i class="fa fa-check"></i><b>4.4.4</b> Turbulence closure scheme</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="model-simulation.html"><a href="model-simulation.html"><i class="fa fa-check"></i><b>5</b> Model simulation</a></li>
+<li class="chapter" data-level="5" data-path="model-simulation.html"><a href="model-simulation.html"><i class="fa fa-check"></i><b>5</b> Model simulation</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="model-simulation.html"><a href="model-simulation.html#simulation-periods-and-warmups"><i class="fa fa-check"></i><b>5.1</b> Simulation periods and warmups</a></li>
+<li class="chapter" data-level="5.2" data-path="model-simulation.html"><a href="model-simulation.html#water-level"><i class="fa fa-check"></i><b>5.2</b> Water level</a></li>
+<li class="chapter" data-level="5.3" data-path="model-simulation.html"><a href="model-simulation.html#velocity-comparison"><i class="fa fa-check"></i><b>5.3</b> Velocity comparison</a></li>
+<li class="chapter" data-level="5.4" data-path="model-simulation.html"><a href="model-simulation.html#temperature"><i class="fa fa-check"></i><b>5.4</b> Temperature</a></li>
+<li class="chapter" data-level="5.5" data-path="model-simulation.html"><a href="model-simulation.html#salinity"><i class="fa fa-check"></i><b>5.5</b> Salinity</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://glgunaratne.github.io/bookdown_CS001" target="blank">Published with bookdown</a></li>
 
@@ -151,12 +162,36 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="model-simulation" class="section level1 hasAnchor" number="5">
 <h1><span class="header-section-number">Chapter 5</span> Model simulation<a href="model-simulation.html#model-simulation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Several simulations were undertaken to demonstrate that the models described in Chapetsr 2 and 3 3 and 4 are fit for purpose to assess the existing and proposed PSDP discharges, including comparisons against:
-• FPA water velocity data at the Northern Basin and Spoil Ground stations (Figure 2-4). The supporting simulations were correspondingly undertaken for the periods of May to July 2006 and February to March of 2007, and so therefore did not include the PSDP discharge.
-• Water Corporation water quality data (temperature, salinity and DO) at the North Buoy, Central Buoy and South Buoy stations (Figure 2-4). Both continuous data (termed RTMS) and profile data were used for comparisons. Supporting simulations were undertaken for the periods of January to March of 2008 and August to September 2008, and so therefore included the PSDP discharge.
-• Historically estimated Sound flushing times.
-• Evaporation rates.
-All model simulations were warmed up for a period of at least 20 days prior to data comparisons. Initial conditions for temperature and salinity were provided by HYCOM + NCODA data, and DO concentrations were assumed to be 95% of saturation based on the temperature and salinity fields. Model outputs were extracted at every 15 minutes.</p>
+<div id="simulation-periods-and-warmups" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Simulation periods and warmups<a href="model-simulation.html#simulation-periods-and-warmups" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A quiescent start condition was adopted for velocity and water levels. Initialisation of salinity and temperature data was based on spatially variable ROMS data as described earlier. The simulations were then warmed-up for at least 21 days prior to all modelling tasks and result analysis, to develop the internal salinity and temperature distributions contributing to density stratification.</p>
+<p>For each of the model scenarios, the models were run for 52 days excluding the warmup periods and Model outputs were extracted at every 15 minutes. Calibration period was selected based on measured data availability and the hydrodynamics were simulated for the one whole year;</p>
+<ul>
+<li><p>Calibration period: 01/01/2013 to 01/03/2013</p></li>
+<li><p>Simulation period: 01/01/2013 to 31/12/2013</p></li>
+</ul>
+<p>Modeled data were compared against observed data (Figure <a href="site-characterisation.html#fig:CS-met">2.2</a>)including;</p>
+<ul>
+<li><p>Velocity data at S01 and S02 sites from JPPL</p></li>
+<li><p>Temperature and salinity data at Stirling and Parmelia from Fremantle Ports Authority</p></li>
+<li><p>Temperature and salinity data at the Central Buoy and South Buoy stations from Water Corporation</p></li>
+</ul>
+</div>
+<div id="water-level" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Water level<a href="model-simulation.html#water-level" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="velocity-comparison" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Velocity comparison<a href="model-simulation.html#velocity-comparison" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Comparisons between simulated velocities and ADCP measurements in the calibration and validation periods at S01 and S02 were carried out. Measured data at different depths were compared with modeled data for the calibration and validation periods.</p>
+<p>Discuss</p>
+<p>Agreements</p>
+<p>The model predictive skill was also tested statistically with calculations of the Index of Agreement (IOA), Mean Absolute Error (MAE), and Root Mean Square Error (RMSE) as defined XXXX At project inception, the following calibration targets were agreed as indicators of satisfactory model validation (Table 5-2):</p>
+</div>
+<div id="temperature" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Temperature<a href="model-simulation.html#temperature" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="salinity" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Salinity<a href="model-simulation.html#salinity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
 <div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
 <div class="csl-entry">
@@ -188,6 +223,7 @@ Middleton JF, P. C., Roughan M. (2012). ROMS modelling in australia: Current sta
 </div>
 <div class="csl-entry">
 UWA. (2022). <em><a href="">Western australian marine science institution (WAMSI) collaborative project agreement, WAMSI westport marine science program, project 1.2 pathways to productivity development of a water quality response model for cockburn sound</a></em>. Head Agreement, The University of Western Australia as the Centre Agent for WAMSI.
+</div>
 </div>
 </div>
 </div>

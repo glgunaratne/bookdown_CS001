@@ -102,7 +102,11 @@ div.csl-indent {
 <li class="chapter" data-level="2" data-path="site-characterisation.html"><a href="site-characterisation.html"><i class="fa fa-check"></i><b>2</b> Site Characterisation</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="site-characterisation.html"><a href="site-characterisation.html#study-site-description"><i class="fa fa-check"></i><b>2.1</b> Study site description</a></li>
-<li class="chapter" data-level="2.2" data-path="site-characterisation.html"><a href="site-characterisation.html#data-avaialability"><i class="fa fa-check"></i><b>2.2</b> Data Avaialability</a></li>
+<li class="chapter" data-level="2.2" data-path="site-characterisation.html"><a href="site-characterisation.html#data-avaialability"><i class="fa fa-check"></i><b>2.2</b> Data Avaialability</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="site-characterisation.html"><a href="site-characterisation.html#previous-model-calibration-and-validation-runs"><i class="fa fa-check"></i><b>2.2.1</b> Previous model calibration and validation runs</a></li>
+<li class="chapter" data-level="2.2.2" data-path="site-characterisation.html"><a href="site-characterisation.html#metocean-data"><i class="fa fa-check"></i><b>2.2.2</b> 2013 metocean data</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="integrated-modelling-approach.html"><a href="integrated-modelling-approach.html"><i class="fa fa-check"></i><b>3</b> Integrated Modelling Approach</a>
 <ul>
@@ -128,7 +132,14 @@ div.csl-indent {
 <li class="chapter" data-level="4.4.4" data-path="hydrodynamic-modelling.html"><a href="hydrodynamic-modelling.html#turbulence-closure-scheme"><i class="fa fa-check"></i><b>4.4.4</b> Turbulence closure scheme</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="model-simulation.html"><a href="model-simulation.html"><i class="fa fa-check"></i><b>5</b> Model simulation</a></li>
+<li class="chapter" data-level="5" data-path="model-simulation.html"><a href="model-simulation.html"><i class="fa fa-check"></i><b>5</b> Model simulation</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="model-simulation.html"><a href="model-simulation.html#simulation-periods-and-warmups"><i class="fa fa-check"></i><b>5.1</b> Simulation periods and warmups</a></li>
+<li class="chapter" data-level="5.2" data-path="model-simulation.html"><a href="model-simulation.html#water-level"><i class="fa fa-check"></i><b>5.2</b> Water level</a></li>
+<li class="chapter" data-level="5.3" data-path="model-simulation.html"><a href="model-simulation.html#velocity-comparison"><i class="fa fa-check"></i><b>5.3</b> Velocity comparison</a></li>
+<li class="chapter" data-level="5.4" data-path="model-simulation.html"><a href="model-simulation.html#temperature"><i class="fa fa-check"></i><b>5.4</b> Temperature</a></li>
+<li class="chapter" data-level="5.5" data-path="model-simulation.html"><a href="model-simulation.html#salinity"><i class="fa fa-check"></i><b>5.5</b> Salinity</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://glgunaratne.github.io/bookdown_CS001" target="blank">Published with bookdown</a></li>
 
@@ -186,7 +197,7 @@ Figure 4.2: A snapshot of ROMS seprate grids for salinity, temeperatire and velo
 </p>
 </div>
 <div class="figure"><span style="display:block;" id="fig:roms-locations"></span>
-<img src="images/ROMS_data_locations.jpg" alt="ROMS data sourcing locations" width="80%" />
+<img src="images/A11348_000_001_03ROMSA4_20221207.jpg" alt="ROMS data sourcing locations" width="80%" />
 <p class="caption">
 Figure 4.3: ROMS data sourcing locations
 </p>
@@ -213,7 +224,7 @@ Figure 4.4: BARRA domains and sub-domains (Sourced from BOM <a href="http://www.
 </p>
 </div>
 <div class="figure"><span style="display:block;" id="fig:barra-locations"></span>
-<img src="images/barra_extentv2.png" alt="BARRA data sourcing locations" width="80%" />
+<img src="images/A11348_000_001_03BARRAA4_20221207.jpg" alt="BARRA data sourcing locations" width="80%" />
 <p class="caption">
 Figure 4.5: BARRA data sourcing locations
 </p>
@@ -463,7 +474,7 @@ Figure 4.9: Key discharge and intake locations in the Cockburn Sound
 </div>
 <div id="bottom-roughness" class="section level3 hasAnchor" number="4.4.3">
 <h3><span class="header-section-number">4.4.3</span> Bottom roughness<a href="hydrodynamic-modelling.html#bottom-roughness" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A default global default bottom roughness length scale (ks) of 0.002 m was used except in at the edge of the shelf, where ks was set to 0.2 m with spatial reconstruction used within Cockburn Sound to capture the domain transitioning from the shallow eastern shelf to the waters in the deep central basin. The adjustment of the local values for ks was undertaken as part of the hydrodynamic model calibration process conducted at Cockburn Sound scale (BMT 2022).</p>
+<p>A default global default bottom roughness length scale (ks) of 0.002 m was used except in at the edge of the shelf, where ks was set to 0.2 m with spatial reconstruction used within Cockburn Sound to capture the domain transitioning from the shallow eastern shelf to the waters in the deep central basin. The adjustment of the local values for ks was undertaken as part of the hydrodynamic model calibration process conducted at Cockburn Sound scale <span class="citation">(<a href="#ref-BMT" role="doc-biblioref"><strong>BMT?</strong></a>)</span>.</p>
 </div>
 <div id="turbulence-closure-scheme" class="section level3 hasAnchor" number="4.4.4">
 <h3><span class="header-section-number">4.4.4</span> Turbulence closure scheme<a href="hydrodynamic-modelling.html#turbulence-closure-scheme" class="anchor-section" aria-label="Anchor link to header"></a></h3>

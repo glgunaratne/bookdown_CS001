@@ -10,10 +10,6 @@ There are three key components of the integrated model (Figure \@ref(fig:int-mod
 
 The primary aim of the hydrodynamic model was to provide a precise representation of currents for determining the fate of the nutrient constituents and sediments. The hydrodynamic model is dynamically coupled to the sediment transport module and water quality module driving ecosystem processes such as the magnitude of nutrient and sediment fluxes through to the temperature dependence of primary productivity.
 
-2) Wave
-
-Wave modelling was included in the assessment to capture sediment resuspension and dispersion from wave action in shallow areas, likely to be significant in determining sediment movements under ambient conditions.
-
 2) Sediment transport
 
 This study has simulated the resuspension, dispersion and settling of sediment released into the water column under ambient conditions using a coupled hydrodynamic and sediment transport model.
@@ -25,7 +21,7 @@ The water quality model has ability to simulate interactions between biogeochemi
 
 ```{r int-model, fig.cap='Components of the integrated biogeochemical model used in this study', out.width='80%',echo=FALSE,}
 # include images created outside R
-knitr::include_graphics("images/Integrated_modelling_componenets1.jpg")
+knitr::include_graphics("images/Integrated_Model_CS1.jpg")
 ```
 
 The following three chapters summarise the methods applied, and assumptions made that underpin the integrated biogeochemical model used in this study, including the model set-ups for each of the model components and the rationale supporting the model assumptions.
