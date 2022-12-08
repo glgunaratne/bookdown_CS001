@@ -15,6 +15,7 @@ fig:swanriver-wl
 tab:dis-table
 fig:dis-locations
 tab:param-table
+fig:model-schem
 about
 project-description
 services-description
@@ -40,6 +41,7 @@ vertical-discretisation
 active-scalars
 bottom-roughness
 turbulence-closure-scheme
+summary-of-model-design
 model-simulation
 simulation-periods-and-warmups
 water-level

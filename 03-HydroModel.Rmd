@@ -203,3 +203,15 @@ knitr::kable(param, booktabs = TRUE, caption = 'Summary of TUFLOW FV model confi
              col.names = c("Model Configuration Description","Model/Value"))
 ```
 
+
+## Summary of model design
+
+Figure \@ref(fig:model-schem) shows the numerical model configuration with key components including boundary conditions, mixing model, model outputs and calibration/validation feedback. 
+
+
+```{r model-schem, fig.cap='Schematic of Numerical Model Configuration', out.width='80%',echo=FALSE,}
+# include images created outside R
+
+knitr::include_graphics("images/tuflowfv_hdromodel_schematic.png")
+
+```
