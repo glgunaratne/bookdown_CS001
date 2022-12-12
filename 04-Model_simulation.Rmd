@@ -30,15 +30,75 @@ Modeled data were compared against observed data (Figure \@ref(fig:CS-met))inclu
 
 ## Velocity comparison
 
-Comparisons between simulated velocities and ADCP measurements in the calibration and validation periods at S01 and S02 were carried out. Measured data at different depths were compared with modeled data for the calibration and validation periods.
+Comparisons between simulated velocities and ADCP measurements in the calibration at S01 and S02 were carried out. Measured data at different depths were compared with modeled data for the calibration periods.
 
 
-Discuss 
+The line plots shown in Figure 5-1 and Figure 5-2 demonstrate that the model reproduced the key characteristics of the velocity field at the different stations.
 
-Agreements
 
-The model predictive skill was also tested statistically with calculations of the Index of Agreement (IOA), Mean Absolute Error (MAE), and Root Mean Square Error (RMSE) as defined XXXX At project inception, the following calibration targets were agreed as indicators of satisfactory model validation (Table 5-2):
 
+The model predictive skill was also tested statistically with calculations of the Index of Agreement (IOA), Mean Absolute Error (MAE), and Root Mean Square Error (RMSE). At project inception, the following calibration targets were agreed as indicators of satisfactory model validation (Table \@ref(tab:calibgoal-tab)):
+
+
+
+```{r calibgoal-tab,echo=FALSE,escape = FALSE,}
+calib_goal<-read.csv(file="table/velocity_calib_goal.csv")
+
+knitr::kable(calib_goal, booktabs = TRUE, caption = 'Calibration goals for velocity',
+             col.names = c("Variable","IOA (-)","MAE (m/s)","RMSE (m/s)"))
+```
+
+This statistical evaluation of the predicted currents at the ADCP locations is provided in Table \@ref(tab:caliba-tab), Table \@ref(tab:calibb-tab), Table \@ref(tab:calibc-tab) and Table \@ref(tab:calibd-tab) for S01 and S02 for different time periods.
+
+
+```{r caliba-tab,echo=FALSE,escape = FALSE,}
+calib_a<-read.csv(file="table/a_timeperiod_Westport_stats.csv")
+
+knitr::kable(calib_a, booktabs = TRUE, caption = 'Summary of model predictive skill statistics for 
+             currents at S01 and S02 for the time period a',
+             #table.attr = "style='width:40%;'" ,
+             format="html",
+             col.names = c("Site","Layer type","IOA Vx","IOA Vy", "RMSE Vx","RMSE Vy", 
+                           "MAE Vx", "MAE Vy","BIAS Vx", "BIAS Vy","$R^{2}$ Vx","$R^{2}$ Vy"))%>%
+ #kable_classic(full_width = T, position = "center", )
+kable_paper("hover", full_width = F)
+```
+
+```{r calibb-tab,echo=FALSE,escape = FALSE,}
+calib_b<-read.csv(file="table/b_timeperiod_Westport_stats.csv")
+
+knitr::kable(calib_b, booktabs = TRUE,  caption = 'Summary of model predictive skill statistics for 
+             currents at S01 and S02 for the time period b',
+             col.names = c("Site","Layer type","IOA Vx","IOA Vy", "RMSE Vx","RMSE Vy", 
+                           "MAE Vx", "MAE Vy","BIAS Vx", "BIAS Vy","$R^{2}$ Vx","$R^{2}$ Vy"))%>%
+              kable_paper("hover", full_width = F)
+#%>% 
+      #kable_styling(latex_options="scale_down")
+             
+
+```
+
+
+```{r calibc-tab,echo=FALSE,escape = FALSE,}
+calib_c<-read.csv(file="table/c_timeperiod_Westport_stats.csv")
+
+knitr::kable(calib_c, booktabs = TRUE, caption = 'Summary of model predictive skill statistics for 
+             currents at S01 and S02 for the time period c',
+             col.names = c("Site","Layer type","IOA Vx","IOA Vy", "RMSE Vx","RMSE Vy", 
+                           "MAE Vx", "MAE Vy","BIAS Vx", "BIAS Vy","$R^{2}$ Vx","$R^{2}$ Vy"))%>%
+              kable_paper("hover", full_width = F)
+```
+
+
+```{r calibd-tab,echo=FALSE,escape = FALSE,}
+calib_d<-read.csv(file="table/d_timeperiod_Westport_stats.csv")
+
+knitr::kable(calib_d, booktabs = TRUE, caption = 'Summary of model predictive skill statistics for 
+             currents at S01 and S02 for the time period d',
+             col.names = c("Site","Layer type","IOA Vx","IOA Vy", "RMSE Vx","RMSE Vy", 
+                           "MAE Vx", "MAE Vy","BIAS Vx", "BIAS Vy","$R^{2}$ Vx","$R^{2}$ Vy"))%>%
+              kable_paper("hover", full_width = F)
+```
 
 ## Temperature
 

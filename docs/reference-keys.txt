@@ -16,6 +16,11 @@ tab:dis-table
 fig:dis-locations
 tab:param-table
 fig:model-schem
+tab:calibgoal-tab
+tab:caliba-tab
+tab:calibb-tab
+tab:calibc-tab
+tab:calibd-tab
 about
 project-description
 services-description
@@ -49,3 +54,4 @@ velocity-comparison
 temperature
 salinity
 references
+cover-image-path-to-the-social-sharing-image-like-imagescover.jpg

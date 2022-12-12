@@ -187,7 +187,7 @@ Salinity and temperature were simulated within the model as density-coupled scal
 
 
 ### Bottom roughness
-A default global default bottom roughness length scale (ks) of 0.002 m was used except in at the edge of the shelf, where ks was set to 0.2 m with spatial reconstruction used within Cockburn Sound to capture the domain transitioning from the shallow eastern shelf to the waters in the deep central basin. The adjustment of the local values for ks was undertaken as part of the hydrodynamic model calibration process conducted at Cockburn Sound scale [@BMT 2022]. 
+A default global default bottom roughness length scale (ks) of 0.002 m was used except in at the edge of the shelf, where ks was set to 0.2 m with spatial reconstruction used within Cockburn Sound to capture the domain transitioning from the shallow eastern shelf to the waters in the deep central basin. The adjustment of the local values for ks was undertaken as part of the hydrodynamic model calibration process conducted at Cockburn Sound scale [@BMT2022]. 
 
 ### Turbulence closure scheme
 The General Ocean Turbulence Model (GOTM) was coupled with the 3D TUFLOW FV hydrodynamic model in order to simulate the vertical mixing processes in the presence of density stratification (http://www.gotm.net/).
