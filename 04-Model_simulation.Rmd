@@ -59,9 +59,11 @@ knitr::kable(calib_a, booktabs = TRUE, caption = 'Summary of model predictive sk
              #table.attr = "style='width:40%;'" ,
              format="html",
              col.names = c("Site","Layer type","IOA Vx","IOA Vy", "RMSE Vx","RMSE Vy", 
-                           "MAE Vx", "MAE Vy","BIAS Vx", "BIAS Vy","$R^{2}$ Vx","$R^{2}$ Vy"))%>%
- #kable_classic(full_width = T, position = "center", )
-kable_paper("hover", full_width = F)
+                           "MAE Vx", "MAE Vy"))%>%
+              #col.names = c("Site","Layer type","IOA Vx","IOA Vy", "RMSE Vx","RMSE Vy", 
+                          # "MAE Vx", "MAE Vy","BIAS Vx", "BIAS Vy","$R^{2}$ Vx","$R^{2}$ Vy"))%>%
+              #kable_classic(full_width = T, position = "center", )
+              kable_paper("hover", full_width = F)
 ```
 
 ```{r calibb-tab,echo=FALSE,escape = FALSE,}
@@ -70,7 +72,7 @@ calib_b<-read.csv(file="table/b_timeperiod_Westport_stats.csv")
 knitr::kable(calib_b, booktabs = TRUE,  caption = 'Summary of model predictive skill statistics for 
              currents at S01 and S02 for the time period b',
              col.names = c("Site","Layer type","IOA Vx","IOA Vy", "RMSE Vx","RMSE Vy", 
-                           "MAE Vx", "MAE Vy","BIAS Vx", "BIAS Vy","$R^{2}$ Vx","$R^{2}$ Vy"))%>%
+                           "MAE Vx", "MAE Vy"))%>%
               kable_paper("hover", full_width = F)
 #%>% 
       #kable_styling(latex_options="scale_down")
@@ -85,7 +87,7 @@ calib_c<-read.csv(file="table/c_timeperiod_Westport_stats.csv")
 knitr::kable(calib_c, booktabs = TRUE, caption = 'Summary of model predictive skill statistics for 
              currents at S01 and S02 for the time period c',
              col.names = c("Site","Layer type","IOA Vx","IOA Vy", "RMSE Vx","RMSE Vy", 
-                           "MAE Vx", "MAE Vy","BIAS Vx", "BIAS Vy","$R^{2}$ Vx","$R^{2}$ Vy"))%>%
+                           "MAE Vx", "MAE Vy"))%>%
               kable_paper("hover", full_width = F)
 ```
 
@@ -96,7 +98,7 @@ calib_d<-read.csv(file="table/d_timeperiod_Westport_stats.csv")
 knitr::kable(calib_d, booktabs = TRUE, caption = 'Summary of model predictive skill statistics for 
              currents at S01 and S02 for the time period d',
              col.names = c("Site","Layer type","IOA Vx","IOA Vy", "RMSE Vx","RMSE Vy", 
-                           "MAE Vx", "MAE Vy","BIAS Vx", "BIAS Vy","$R^{2}$ Vx","$R^{2}$ Vy"))%>%
+                           "MAE Vx", "MAE Vy"))%>%
               kable_paper("hover", full_width = F)
 ```
 
